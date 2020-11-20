@@ -9,7 +9,7 @@ function LoginPage() {
         <LoginForm />
         <div className="button-wrapper">
             <p>Don't have an account?</p>
-            <Link to="/newuser"><button className="yellow-button">Create New User</button></Link>
+            <Link to="/newuser"><button className="blue-button-rounded">Create New User</button></Link>
         </div>
     </div>
     )
