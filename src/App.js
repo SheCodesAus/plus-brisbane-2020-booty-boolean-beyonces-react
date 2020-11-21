@@ -2,6 +2,7 @@ import logo from './logo.svg';
 
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LoginPage from "./pages/LoginPage"
 import LogoutPage from "./pages/LogoutPage"
 
