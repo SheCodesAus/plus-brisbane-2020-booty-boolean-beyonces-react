@@ -1,0 +1,12 @@
+.down-arrow {
+  width: 3vw;
+  min-width: 45px;
+}
+
+.user-welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
