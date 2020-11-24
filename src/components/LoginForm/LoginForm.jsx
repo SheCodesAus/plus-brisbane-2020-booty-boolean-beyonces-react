@@ -6,6 +6,7 @@ import "./LoginForm.css"
 function LoginForm() {
   const [credentials, setCredentials] = useState({
     username: "",
+    name: "",
     password: "",
   });
 
@@ -36,16 +37,19 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (credentials.username && credentials.password) {
+    if (credentials.username && credentials.name && credentials.password) {
       postData().then((response) => {
         console.log(response, "response");
         if (response.non_field_errors) {
           window.alert("Login failed, soz");
-          history.push("/login");
+          history.push("/profile");
           return;
         }
         window.localStorage.setItem("token", response.token);
         window.localStorage.setItem("username", credentials.username)
+        window.localStorage.setItem("name", credentials.name)
+        window.localStorage.setItem("userID", response.id)
+
         history.push("/");
       });
     }
@@ -60,6 +64,15 @@ function LoginForm() {
           type="text"
           id="username"
           placeholder="Enter username"
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-item">
+        <label htmlFor="name">Nickname:</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter name"
           onChange={handleChange}
         />
       </div>

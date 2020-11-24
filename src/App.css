@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+html {
+  font-family: "Montserrat", sans-serif;
+  padding: 0 50px;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +21,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +28,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  color: #1690b9;
+  background-color: white;
+  padding: 1em 0px;
+}
+
+#app-header a {
+  color: #1690b9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .App-link {
@@ -46,11 +68,74 @@
   margin-top: 50px;
 }
 
+#product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 30vh;
+  object-position: center;
+}
+
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.pink-tick-bg {
+  background-image: url("https://s3-alpha-sig.figma.com/img/09ae/fe71/2d8089c2aa8ae6b6dbda51aa5f642763?Expires=1607299200&Signature=YPJdfpLnFOG43PdkaxNSeIokQuWinK9gMFPv9rDnQY7vEX5irz7orgy1DD18ZM2BVjpRC5RxKt4WnVV-SHgAuiUF8njmIIlLJHZIvE8raB7dyTK31ii8pomBhaQWm3OHp8oxQS~4EtEphH2MzyDMnQDgM76pNNJ0J~JXYQG6qM7SGoCIgMIcUHYm7lst1KhZUO9sN-aOHGGDZa6iNfdK4~cPupwN76SOHu7P3128yZytYbXobL3D88-dnGSxjbiLeUJD8~cUCLtR1ZpxB7X9eup9GAGq-NuUBly5XP~nNcuhOeCuKsX7s6BFAThITulMSh2VpZYElBUx9HRVWC4UNQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  object-fit: contain;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15% 0;
+  background-attachment: fixed;
+}
+
+.white-text-box {
+  background-color: white;
+  width: 75%;
+  text-align: center;
+}
+
+.white-text-box > div {
+  padding: 5%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #app-header {
+    justify-items: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #app-header a {
+    padding: 0em 1em;
+  }
+
+  html {
+    padding: 0 25px;
   }
 }
