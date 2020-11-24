@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import LoginPage from "./pages/LoginPage"
 import LogoutPage from "./pages/LogoutPage"
+import ProductListPage from "./pages/ProductListPage"
+import AboutPage from "./pages/AboutPage"
 
 import './App.css';
 
@@ -25,6 +27,15 @@ function App() {
         <Route path="/logout">
           <LogoutPage />
         </Route>
+
+        <Route path="/products">
+          <ProductListPage />
+        </Route>
+
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+
 
         </Switch>
 

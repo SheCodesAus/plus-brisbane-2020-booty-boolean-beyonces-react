@@ -1,14 +1,11 @@
 import React from 'react';
-import "./App.css"
+import "../App.css"
 import { Link } from "react-router-dom";
 
-function AboutUsPage() {
+function AboutPage() {
     return (
         <div>
         <div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" className="about-img"/>
-            </div>
             <div>
 
                 <h2>About Us</h2>
@@ -49,4 +46,4 @@ function AboutUsPage() {
 
 }
 
-export default AboutUsPage;
+export default AboutPage;
