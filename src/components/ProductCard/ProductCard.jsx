@@ -7,10 +7,12 @@ function ProductCard(props) {
     const { productData } = props;
     return (
         <div className="product-card">
-        <Link to={`/product/${productData.id}`}>
+        <Link to={`/products/${productData.id}`}>
             <img src={productData.image}/>
             <div className="product-card-title">
-                <h3>{productData.title}</h3>
+                <h3>{productData.model_tech}</h3>
+                <p>{productData.brand}</p>
+                <p>${productData.price}</p>
                 <p></p>
             </div>
         </Link>

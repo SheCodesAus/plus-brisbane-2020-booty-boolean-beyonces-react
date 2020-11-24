@@ -1,9 +1,8 @@
 .product-card {
   width: 100%;
-  border: 2.5px solid #cfdbd5;
-  box-shadow: 0px 0px 15px #cfdbd5;
-  background-color: #cfdbd5;
-  border-radius: 15px;
+  border: 2.5px solid #f5f5f5;
+  box-shadow: 0px 0px 15px #f5f5f5;
+  background-color: white;
 }
 
 .product-card img {
@@ -11,6 +10,10 @@
   height: 300px;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.product-card a {
+  text-decoration: none;
 }
 
 .product-card-title {

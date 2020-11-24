@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-// import { allProducts } from "../data";
 import ProductCard from "../components/ProductCard/ProductCard";
+import "../App.css";
 
 
 function ProductListPage() {
     const [productList, setProductList] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/products`).then((results) => {
+        fetch(`${process.env.REACT_APP_API_URL}/products/`).then((results) => {
             return results.json();
         }).then((data) => {
             setProductList(data);
@@ -23,7 +23,7 @@ function ProductListPage() {
             })}
         </div>
     </div>
-    )
+    );
 }
 
 export default ProductListPage;
