@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import mainLogo from "../assets/opt-in_logo.png";
 
 function Header() {
 
     return (
         <div className="my-header">
-            {/* <img src={require('../assets/circle.png')} /> */}
-            <h1>Opt-In</h1>
+            <Link to={'/'}>
+            <img class="logo" src={mainLogo}/> </Link>
         </div>
     );
 }
