@@ -39,16 +39,16 @@ function App() {
           <LogoutPage />
         </Route>
 
-        <Route path="/products/:category">
-          <CategoryListPage />
-        </Route>
-
         <Route path="/products/:id">
           <ProductPage />
         </Route>
 
         <Route path="/products">
           <ProductListPage />
+        </Route>
+
+        <Route path="/:category">
+          <CategoryListPage />
         </Route>
 
         <Route path="/about">
