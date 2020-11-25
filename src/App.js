@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import LoginPage from "./pages/LoginPage";
@@ -11,6 +12,7 @@ import ProductListPage from "./pages/ProductListPage";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage"
+import CategoryListPage from "./pages/CategoryListPage"
 
 import './App.css';
 
@@ -35,6 +37,10 @@ function App() {
 
         <Route path="/logout">
           <LogoutPage />
+        </Route>
+
+        <Route path="/products/:category">
+          <CategoryListPage />
         </Route>
 
         <Route path="/products/:id">
