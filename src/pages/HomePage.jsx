@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import UserWelcome from "../components/UserWelcome/UserWelcome";
 import LoginForm from "../components/LoginForm/LoginForm"
 import "../App.css"
+import CategoryTile from "../components/CategoryTile/CategoryTile";
     
     function HomePage() {
 
@@ -26,6 +27,7 @@ import "../App.css"
                 </div>
 
                 <LoginForm />
+                <CategoryTile />
 
             </div>
         )

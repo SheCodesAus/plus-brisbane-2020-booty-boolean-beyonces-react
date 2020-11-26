@@ -1,0 +1,405 @@
+
+
+
+
+.CategoryTileBackground_lap {
+    position: absolute;
+    width: 380px;
+    height: 2800px;
+    left: 0px;
+    top: 1204px;
+
+    background: #f6ecf0;
+}
+
+.CategoryHeader {
+    position: absolute;
+    width: 338px;
+    height: 39px;
+    left: 15px;
+    top: 55px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+
+    color: #1690B9;
+
+}
+
+.CategoryTileWrapper_lap {
+    background: #f6ecf0;
+
+}
+
+.CategoryImg_lap {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 18px;
+    right: 18px;
+    top: 200px;  
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.CategoryHeading_lap {
+    position: absolute;
+    width: 67px;
+    height: 20px;
+    left: 17px;
+    top: 550px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+      
+    color: #1690B9;    
+}
+
+
+.CategoryBodyCopy_lap {
+    position: absolute;
+    height: 453px;
+    left: 17px;
+    right: 18px;
+    top: 580px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #666666;  
+}
+
+.Button_lap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: absolute;
+    height: 52px;
+    left: 18px;
+    right: 17px;
+    bottom: 3280px;
+    top: 710px;
+    width: 340px;
+    padding: 16 32 16 32;
+    
+    background: #1690b9;
+    border-radius: 100px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    /* identical to box height */
+
+    text-align: center;
+    justify-content: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+}
+
+.Button_lap:hover {
+    background-color: #4fb2da;
+}
+
+
+
+
+
+
+
+.CategoryTileWrapper_phone {
+    background: #f6ecf0;
+
+}
+
+.CategoryImg_phone {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 18px;
+    right: 18px;
+    top: 2049px;  
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.CategoryHeading_phone {
+    position: absolute;
+    width: 67px;
+    height: 20px;
+    left: 17px;
+    top: 2411px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+      
+    color: #1690B9;    
+}
+
+
+.CategoryBodyCopy_phone {
+    position: absolute;
+    height: 453px;
+    left: 17px;
+    right: 18px;
+    top: 2440px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #666666;  
+}
+
+.Button_phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: absolute;
+    height: 52px;
+    left: 18px;
+    right: 17px;
+    bottom: 3280px;
+    top: 2569px;
+    width: 340px;
+    padding: 16 32 16 32;
+    
+    background: #1690b9;
+    border-radius: 100px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    /* identical to box height */
+
+    text-align: center;
+    justify-content: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+}
+
+.Button_phone:hover {
+    background-color: #4fb2da;
+}
+
+
+
+
+
+
+.CategoryTileWrapper_tablet{
+    background: #f6ecf0;
+
+}
+
+.CategoryImg_tablet {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 18px;
+    right: 18px;
+    top: 2707px;  
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.CategoryHeading_tablet {
+    position: absolute;
+    width: 67px;
+    height: 20px;
+    left: 17px;
+    top: 3076px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+      
+    color: #1690B9;    
+}
+
+
+.CategoryBodyCopy_tablet {
+    position: absolute;
+    height: 453px;
+    left: 17px;
+    right: 18px;
+    top: 3108px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #666666;  
+}
+
+.Button_tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: absolute;
+    height: 52px;
+    left: 18px;
+    right: 17px;
+    bottom: 3280px;
+    top: 3214px;
+    width: 340px;
+    padding: 16 32 16 32;
+    
+    background: #1690b9;
+    border-radius: 100px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    /* identical to box height */
+
+    text-align: center;
+    justify-content: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+}
+
+.Button_tablet:hover {
+    background-color: #4fb2da;
+}
+
+
+
+
+.CategoryTileWrapper_acc{
+    background: #f6ecf0;
+
+}
+
+.CategoryImg_acc {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 18px;
+    right: 18px;
+    top: 3354px;  
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.CategoryHeading_acc {
+    position: absolute;
+    width: 67px;
+    height: 20px;
+    left: 17px;
+    top: 3720px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+      
+    color: #1690B9;    
+}
+
+
+.CategoryBodyCopy_acc {
+    position: absolute;
+    height: 453px;
+    left: 17px;
+    right: 18px;
+    top: 3753px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #666666;  
+}
+
+.Button_acc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    position: absolute;
+    height: 52px;
+    left: 18px;
+    right: 17px;
+    bottom: 3280px;
+    top: 3840px;
+    width: 340px;
+    padding: 16 32 16 32;
+    
+    background: #1690b9;
+    border-radius: 100px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    /* identical to box height */
+
+    text-align: center;
+    justify-content: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+}
+
+.Button_acc:hover {
+    background-color: #4fb2da;
+}
