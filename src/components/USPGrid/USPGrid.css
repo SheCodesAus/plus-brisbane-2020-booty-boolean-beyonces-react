@@ -13,6 +13,7 @@
   font-family: Montserrat, Arial, sans-serif;
   color: #373737;
   padding: 0.5em;
+  
 }
 
 .grid-wrapper-4x1 > div > h5 {
@@ -58,4 +59,15 @@
     row-gap: 10px;
     column-gap: 10px;
   }
+}
+
+
+.usp-mobile {
+  position: absolute;
+  width: 380px;
+  height: 500px;
+  left: 0px;
+  top: 4100px;
+
+
 }

@@ -91,25 +91,28 @@ html {
 }
 
 .pink-tick-bg {
-  background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg");
-  background-color: #E29EA6;
-  object-fit: contain;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15% 0;
-  background-attachment: fixed;
+  /* background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg"); */
+  background-color: #1690b9;
+  position: absolute;
+  width: 375px;
+  height: 668px;
+  left: 0px;
+  top: 159px;
 }
 
 .white-text-box {
-  background-color: white;
-  width: 75%;
-  text-align: center;
+  position: absolute;
+  width: 331px;
+  height: 494px;
+  left: 23px;
+  top: 65px;
+  
+  background: #FFFFFF;
+  
 }
 
 .white-text-box > div {
-  padding: 5%;
+  padding: 10 10 10 10;
 }
 
 @keyframes App-logo-spin {
@@ -140,3 +143,79 @@ html {
     padding: 0 25px;
   }
 }
+
+
+
+
+.WelcomeHeader {
+  max-width: 337px;
+  height: 43px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  
+  color: #1690B9;
+  margin: 42px;
+  
+}
+
+.WelcomeText-1 {
+
+  position: absolute;
+  max-width: 337px;
+  height: 91px;
+  top: 77px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #666666;
+  margin: 22px;
+  margin-top: 42px;
+
+
+  
+}
+
+
+.WelcomeText-2 {
+
+  position: absolute;
+  max-width: 337px;
+  top: 160px;
+  margin-top: 20px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+  color: #666666;
+  margin: 22px;
+  margin: 32px;
+
+
+
+
+}
+
+

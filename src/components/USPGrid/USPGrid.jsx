@@ -6,6 +6,7 @@ function USPGrid() {
 
     return (
         <div>
+                <div class="usp-mobile">
                 <div className="grid-wrapper-4x1">
                     <div>
                         <h5>Top-notch Product Recommendations</h5>
@@ -33,6 +34,7 @@ function USPGrid() {
                             touch. We also accept compliments in the form of haikus. </p>
                     </div>
                 </div>
+            </div>
         </div>
     );
 }

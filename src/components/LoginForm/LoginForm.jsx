@@ -58,6 +58,8 @@ function LoginForm() {
 
   return (
     <form className="form-wrapper">
+      <h1 class="FormHeader">Login</h1>
+
       <div className="form-item">
         <label htmlFor="username">Username:</label>
         <input
