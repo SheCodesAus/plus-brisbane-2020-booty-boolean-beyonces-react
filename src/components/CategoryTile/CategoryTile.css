@@ -166,6 +166,7 @@
     left: 17px;
     right: 18px;
     top: 2440px;
+    max-width: 339px;
 
     font-family: Montserrat;
     font-style: normal;
@@ -261,6 +262,8 @@
     left: 17px;
     right: 18px;
     top: 3108px;
+    max-width: 339px;
+
 
     font-family: Montserrat;
     font-style: normal;
@@ -281,7 +284,7 @@
     left: 18px;
     right: 17px;
     bottom: 3280px;
-    top: 3214px;
+    top: 3220px;
     width: 340px;
     padding: 16 32 16 32;
     
@@ -354,6 +357,8 @@
     left: 17px;
     right: 18px;
     top: 3753px;
+    max-width: 339px;
+
 
     font-family: Montserrat;
     font-style: normal;
@@ -374,7 +379,7 @@
     left: 18px;
     right: 17px;
     bottom: 3280px;
-    top: 3840px;
+    top: 3847px;
     width: 340px;
     padding: 16 32 16 32;
     
