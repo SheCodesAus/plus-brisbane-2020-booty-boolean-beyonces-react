@@ -5,6 +5,7 @@ import "../App.css"
 import CategoryTile from "../components/CategoryTile/CategoryTile";
 import USPGrid from "../components/USPGrid/USPGrid";
 
+
     
     function HomePage() {
 

@@ -63,9 +63,8 @@ function ProductPage() {
       <div className="outer-wrapper">
         <div className="project-details">
         <h2 class="model">{productData.model_tech}</h2>
+        <p class="overview ">Why Opt-in? {productData.justification}</p>
         <p class="overview ">{productData.brand}</p>
-        <p class="overview ">{productData.justification}</p>
-        <p class="overview ">{productData.os}</p>
         <p class="overview ">{productData.spec1}</p>
         <p class="overview ">{productData.spec2}</p>
         <p class="overview ">{productData.spec3}</p>
@@ -74,11 +73,12 @@ function ProductPage() {
         <p class="overview ">{productData.spec6}</p>
         <p class="price">${productData.price}</p>
 
-        <button className="blue-button-rounded" onClick={handleSubmit}>Add to Wishlist</button>
+        {/* <button className="blue-button-rounded" onClick={handleSubmit}>Add to Wishlist</button> */}
+        <p class="see-details">Save To Your Favourites<Link onClick={handleSubmit}></Link></p>
 
         <p>{productData.supplier1}</p>
 
-        {/* <Link to="/phone"> <img class="SupplierLogo" src={JB} alt="Go to JB HiFi Product Listing" /> </Link> */}
+        {/* <Link to={productData.supplier1}> <img class="SupplierLogo" src={JB} alt="Go to JB HiFi Product Listing" /> </Link> */}
 
       </div>
       </div>

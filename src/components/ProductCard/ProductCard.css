@@ -1,13 +1,13 @@
 .product-card {
-  width: 340px;
+  width: 332px;
   background-color: white;
   margin-top: 70px;
   justify-content: center;
 }
 
 .product-card img {
-  width: 340px;
-  height: 340px;
+  width: 330px;
+  height: 330px;
   object-fit: 50%;
   max-height: 30vh;
   object-position: left;
@@ -68,7 +68,7 @@ color: #000000;
 
   background: #1690b9;
   border-radius: 100px;
-  width: 340px;
+  width: 330px;
   padding: 16 32 16 32;
   height: 52px;
   display: flex;

@@ -80,7 +80,7 @@ html {
 .product-img {
   width: 100%;
   object-fit: cover;
-  max-height: 30vh;
+  height: 330px;
   object-position: center;
 }
 
@@ -91,8 +91,8 @@ html {
 }
 
 .pink-tick-bg {
-  /* background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg"); */
-  background-color: #1690b9;
+  background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg");
+  /* background-color: #1690b9; */
   position: absolute;
   width: 375px;
   height: 668px;
@@ -274,4 +274,44 @@ line-height: 16px;
 /* Black */
 
 color: #000000;
+}
+
+
+.see-details {
+
+  background: #1690b9;
+  border-radius: 100px;
+  width: 330px;
+  padding: 16 32 16 32;
+  height: 52px;
+  display: flex;
+  align-items: center;
+
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  /* identical to box height */
+
+  text-align: center;
+  justify-content: center;
+
+  /* White */
+
+  color: #FFFFFF;
+}
+
+
+
+
+.no-account {
+  position: absolute;
+  width: 338px;
+  height: 39px;
+  left: 15px;
+  right: 15px;
+  top: 490px
 }
