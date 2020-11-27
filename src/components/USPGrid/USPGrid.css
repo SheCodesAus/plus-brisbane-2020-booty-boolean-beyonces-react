@@ -12,7 +12,6 @@
   text-align: center;
   font-family: Montserrat, Arial, sans-serif;
   color: #373737;
-  padding: 0.5em;
   
 }
 
@@ -68,8 +67,12 @@
   height: 500px;
   left: 0px;
   top: 4100px;
+  margin: 20px;
+  
+
 
 }
+
 
 
 .usp {
@@ -99,162 +102,20 @@
   line-height: 16px;
 
 
-}
-
-
-
-
-
-/* 
-.usp-1 {
-  position: absolute;
-  height: 31px;
-  left: 17px;
-  right: 198px;
-  top: 4269px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  line-height: 17px;
-  
-  color: #666666;
 
 }
 
-.usp-2 {
-  position: absolute;
-  height: 31px;
-  left: 198px;
-  right: 18px;
-  top: 4269px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  line-height: 17px;
-  
-  color: #666666;
+.tick {
+
+  width: 41px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+
+
 
 }
 
-
-.usp-3 {
-  position: absolute;
-  height: 19px;
-  left: 17px;
-  right: 199px;
-  top: 4588px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  line-height: 17px;
-  
-  color: #666666;
-
-}
-
-
-.usp-4 {
-  position: absolute;
-  height: 30px;
-  left: 197px;
-  right: 20px;
-  top: 4589px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  
-  color: #666666;
-
-}
-
-
-.copy-1 {
-  position: absolute;
-  height: 160px;
-  left: 17px;
-  right: 198px;
-  top: 4296px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  
-  color: #666666;
-
-}
-
-
-.copy-2 {
-  position: absolute;
-  height: 160px;
-  left: 17px;
-  right: 198px;
-  top: 4296px;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-
-  color: #666666;
-}
-
-
-.copy-3 {
-  position: absolute;
-  height: 191px;
-  left: 18px;
-  right: 198px;
-  top: 4616px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  
-  color: #666666;
-  
-}
-
-
-.copy-4 {
-  position: absolute;
-  height: 176px;
-  left: 198px;
-  right: 19px;
-  top: 4628px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  text-align: center;
-  
-  color: #666666;
-} */
 
 

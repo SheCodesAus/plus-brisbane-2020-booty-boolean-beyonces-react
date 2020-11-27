@@ -2,7 +2,8 @@
 
 html {
   font-family: "Montserrat", sans-serif;
-  padding: 0 50px;
+  /* padding: 0 50px; */
+
 }
 
 .App {
@@ -69,12 +70,11 @@ html {
 }
 
 #product-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 15px;
-  row-gap: 15px;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+
   width: 100%;
-  margin: 0 auto;
+  margin-top: 70px;
 }
 
 .product-img {
@@ -87,7 +87,7 @@ html {
 .outer-wrapper {
   display: flex;
   justify-content: center;
-  padding-top: 25px;
+  padding-top: 30px;
 }
 
 .pink-tick-bg {
@@ -213,9 +213,65 @@ html {
   margin: 22px;
   margin: 32px;
 
+}
 
 
+.product-bg {
+
+  width: 375px;
+  height: 1298px;
+  background: rgba(226, 158, 166, 0.15);
+}
+
+
+
+.project-details {
 
 }
 
 
+.product-card img {
+  width: 340px;
+  height: 340px;
+  object-fit: 50%;
+  max-height: 30vh;
+  object-position: left;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.pro-model {
+  margin-top: 30px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  max-width: 340px;
+
+  
+  /* Black */
+  
+  color: #000000;
+}
+
+
+
+
+
+.price {
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+/* Black */
+
+color: #000000;
+}

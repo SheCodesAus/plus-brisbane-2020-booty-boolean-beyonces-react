@@ -17,10 +17,16 @@ function ProductListPage() {
     return (
 
     <div>
+
+        <div class="product-bg">
+
         <div id="product-list">
             {productList.map((productData, key) => {
                 return <ProductCard key={key} productData={productData} />;
             })}
+        </div>
+
+
         </div>
     </div>
     );

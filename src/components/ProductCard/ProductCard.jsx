@@ -10,9 +10,11 @@ function ProductCard(props) {
         <Link to={`/products/${productData.id}`}>
             <img src={productData.image}/>
             <div className="product-card-title">
-                <h3>{productData.model_tech}</h3>
-                <p>{productData.brand}</p>
-                <p>${productData.price}</p>
+                <h3 class="model">{productData.model_tech}</h3>
+                <p class="overview">{productData.overview}</p>
+                <p class="price">${productData.price}</p>
+                <p class="see-details">See Details here<Link to={`/products/${productData.id}`}></Link></p>
+
                 <p></p>
             </div>
         </Link>
@@ -21,3 +23,7 @@ function ProductCard(props) {
 }
 
 export default ProductCard;
+
+
+
+

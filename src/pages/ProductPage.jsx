@@ -56,15 +56,27 @@ function ProductPage() {
     return (
 
       <div>
-      <img src={productData.image} className="product-img" />
+
+      <img src={productData.image} class="product-card" />
       <div className="outer-wrapper">
         <div className="project-details">
-        <h2>{productData.model_tech}</h2>
-        <p>{productData.brand}</p>
-        <p>${productData.price}</p>
-        <p>${productData.justification}</p>
+        <h2 class="model">{productData.model_tech}</h2>
+        <p class="overview ">{productData.brand}</p>
+        <p class="overview ">{productData.justification}</p>
+        <p class="overview ">{productData.os}</p>
+        <p class="overview ">{productData.spec1}</p>
+        <p class="overview ">{productData.spec2}</p>
+        <p class="overview ">{productData.spec3}</p>
+        <p class="overview ">{productData.spec4}</p>
+        <p class="overview ">{productData.spec5}</p>
+        <p class="overview ">{productData.spec6}</p>
+        <p class="price">${productData.price}</p>
 
         <button className="blue-button-rounded" onClick={handleSubmit}>Add to Wishlist</button>
+
+        <p>{productData.supplier1}</p>
+
+
       </div>
       </div>
 
