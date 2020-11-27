@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link, List } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
+// import JB from "../assets/images.png";
+
 
 import "../App.css";
 
@@ -76,6 +78,7 @@ function ProductPage() {
 
         <p>{productData.supplier1}</p>
 
+        {/* <Link to="/phone"> <img class="SupplierLogo" src={JB} alt="Go to JB HiFi Product Listing" /> </Link> */}
 
       </div>
       </div>
