@@ -28,7 +28,7 @@ import USPGrid from "../components/USPGrid/USPGrid";
                     </div>
                 </div>
                 
-                <LoginForm />
+                {/* <LoginForm /> */}
                 <CategoryTile />
                 <USPGrid />
 

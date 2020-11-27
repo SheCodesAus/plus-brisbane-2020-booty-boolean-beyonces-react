@@ -91,7 +91,9 @@ function LoginForm() {
         <button type="submit" onClick={handleSubmit} className="my-button"> 
           Login
         </button>
+        <div class="logout">
           <Link to="/logout">Logout</Link>
+          </div>
       </div>
     </form>
   );

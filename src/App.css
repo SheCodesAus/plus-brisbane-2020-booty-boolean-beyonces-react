@@ -29,6 +29,8 @@ html {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  max-width: 375px;
+
 }
 
 #app-header {
@@ -38,6 +40,8 @@ html {
   color: #1690b9;
   background-color: white;
   padding: 1em 0px;
+  max-width: 375px;
+
 }
 
 #app-header a {
