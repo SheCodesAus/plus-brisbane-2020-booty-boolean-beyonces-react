@@ -1,0 +1,86 @@
+
+
+
+
+
+
+.form-wrapper {
+    position: absolute;
+    width: 338px;
+    height: 39px;
+    left: 15px;
+    right: 15px;
+    top: 200px;
+
+}
+
+.FormHeader {
+  width: 338px;
+  height: 39px;
+  left: 15px;
+  top: 75px;
+  margin-top: 0px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+
+  color: #1690B9;
+
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 2em;
+  font-family: Montserrat, sans-serif;
+}
+
+.my-button {
+  background: #1690b9;
+  border-radius: 100px;
+  width: 330px;
+  padding: 16 32 16 32;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  /* identical to box height */
+
+  text-align: center;
+  justify-content: center;
+
+  /* White */
+
+  color: #FFFFFF;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.logout {
+  width: 100%;
+  text-align: center;
+  color: #E29EA6;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  margin-top: 30px;
+
+}
+
+
