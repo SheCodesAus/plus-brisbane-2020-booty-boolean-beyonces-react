@@ -29,7 +29,7 @@ html {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  max-width: 375px;
+    max-width: 375px;
 
 }
 
@@ -40,8 +40,6 @@ html {
   color: #1690b9;
   background-color: white;
   padding: 1em 0px;
-  max-width: 375px;
-
 }
 
 #app-header a {
@@ -95,13 +93,25 @@ html {
 }
 
 .pink-tick-bg {
-  background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg");
+  /* background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg"); */
   /* background-color: #1690b9; */
   position: absolute;
   width: 375px;
   height: 668px;
   left: 0px;
   top: 159px;
+  display: flex;
+}
+
+.newtick {
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  width: 375px;
+  height: 668px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .white-text-box {
@@ -110,6 +120,9 @@ html {
   height: 494px;
   left: 23px;
   top: 65px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
   background: #FFFFFF;
   
@@ -154,11 +167,13 @@ html {
 .WelcomeHeader {
   max-width: 337px;
   height: 43px;
+  top: 27px;
+
   
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 37px;
   text-align: center;
   
@@ -172,7 +187,7 @@ html {
   position: absolute;
   max-width: 337px;
   height: 91px;
-  top: 77px;
+  top: 67px;
   
   font-family: Montserrat;
   font-style: normal;
@@ -188,7 +203,8 @@ html {
   color: #666666;
   margin: 22px;
   margin-top: 42px;
-
+  background-color: white;
+  padding: 10px;
 
   
 }
@@ -199,7 +215,7 @@ html {
   position: absolute;
   max-width: 337px;
   top: 160px;
-  margin-top: 20px;
+  margin-top: 60px;
   
   font-family: Montserrat;
   font-style: normal;
@@ -216,6 +232,8 @@ html {
   color: #666666;
   margin: 22px;
   margin: 32px;
+  background-color: white;
+  padding: 20px;
 
 }
 
@@ -229,9 +247,6 @@ html {
 
 
 
-.project-details {
-
-}
 
 
 .product-card img {

@@ -4,6 +4,8 @@ import LoginForm from "../components/LoginForm/LoginForm"
 import "../App.css"
 import CategoryTile from "../components/CategoryTile/CategoryTile";
 import USPGrid from "../components/USPGrid/USPGrid";
+import imagetick from "../components/assets/opt-in_mobile.jpg";
+
 
 
     
@@ -25,6 +27,13 @@ import USPGrid from "../components/USPGrid/USPGrid";
                                 from industry experts, Opt-In is the nerdy friend everybody needs. <br></br><br></br>Browse products below.</p>
 
                         </div>
+
+                        <div> <img class="newtick" src={ imagetick } ></img>
+                        </div>
+
+
+
+
                     </div>
                 </div>
                 
