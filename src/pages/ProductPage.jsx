@@ -44,6 +44,7 @@ function ProductPage() {
 
     // function to handle the button clickity-click
     const handleSubmit = (e) => {
+        // console.log("testie")
         e.preventDefault();
 
         putData().then((response) => {
@@ -74,7 +75,13 @@ function ProductPage() {
         <p class="price">${productData.price}</p>
 
         {/* <button className="blue-button-rounded" onClick={handleSubmit}>Add to Wishlist</button> */}
-        <p class="see-details">Save To Your Favourites<Link onClick={handleSubmit}></Link></p>
+        {/* <p class="see-details">Save To Your Favourites<Link onClick={handleSubmit}></Link></p> */}
+
+        {/* AA 28.11: the above was not quite working, unsure why, changed to button below and the functionality works now */}
+
+        <button type="submit" className="see-details" onClick={handleSubmit}>
+            Save To Your Favourites
+        </button>
 
         <p>{productData.supplier1}</p>
 

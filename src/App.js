@@ -11,8 +11,10 @@ import LogoutPage from "./pages/LogoutPage";
 import ProductListPage from "./pages/ProductListPage";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
-import ProductPage from "./pages/ProductPage"
-import CategoryListPage from "./pages/CategoryListPage"
+import ProductPage from "./pages/ProductPage";
+import CategoryListPage from "./pages/CategoryListPage";
+import UserPage from "./pages/UserPage";
+import FavPage from "./pages/FavPage";
 
 import './App.css';
 
@@ -31,33 +33,48 @@ function App() {
         <Switch>
 
 
-        <Route path="/login">
-          <LoginPage />
+          <Route path="/login">
+            <LoginPage />
+            </Route>
+
+          <Route path="/logout">
+            <LogoutPage />
           </Route>
 
-        <Route path="/logout">
-          <LogoutPage />
-        </Route>
+          {/* AA 28/11: added this here to start with the user page */}
+          <Route path="/profile">
+            <UserPage />
+          </Route>
 
-        <Route path="/products/:id">
-          <ProductPage />
-        </Route>
+          {/* AA 29/11: added this here to start with the fav page */}
+          <Route path="/Fav">
+            <FavPage />
+          </Route>
 
-        <Route path="/products">
-          <ProductListPage />
-        </Route>
 
-        <Route path="/:category">
-          <CategoryListPage />
-        </Route>
+          <Route path="/products/:id">
+            <ProductPage />
+          </Route>
 
-        <Route path="/about">
-          <AboutPage />
-        </Route>
+          <Route path="/products">
+            <ProductListPage />
+          </Route>
 
-        <Route path="/">
-            <HomePage />
-        </Route>
+
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+
+          <Route path="/:category">
+            <CategoryListPage />
+          </Route>
+
+        
+          
+
+          <Route path="/">
+              <HomePage />
+          </Route>
 
 
         </Switch>

@@ -334,3 +334,44 @@ color: #000000;
   right: 15px;
   top: 490px
 }
+
+
+/* AA 29.11 CSS for user page - Feel free to change */
+
+
+
+.single-user{
+  color:#2F4F4F;
+  margin: 10px;
+  padding: 10px;
+  /* border-style: solid;
+  border-radius: 5%;
+  border-color: black; */
+  display: flex;
+
+  
+}
+
+
+
+.single-user-box{
+  
+  color:#2F4F4F;
+  margin: 10px;
+  padding: 10px;
+  /* border-style: solid;
+  border-radius: 5%;
+  border-color: black; */
+  width:50%;
+
+}
+
+
+.single-user img{
+  width: 50%;
+  height: 75%;
+  object-fit: cover;
+  border-style: solid;
+  border-radius: 5%;
+  border-color: pink;
+}
