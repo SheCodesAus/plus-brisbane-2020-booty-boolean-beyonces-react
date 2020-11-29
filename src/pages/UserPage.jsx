@@ -5,8 +5,7 @@ import "../App.css"
 
 
 function UserPage() {
-    const [userData, setUserData] = useState ([]);
-    // const { id } = useParams(); 
+    const [userData, setUserData] = useState ([]); 
     const usid =  window.localStorage.getItem("userID");
 
     useEffect(() => {

@@ -6,7 +6,7 @@ import "./LoginForm.css"
 function LoginForm() {
   const [credentials, setCredentials] = useState({
     username: "",
-    name: "",
+    // name: "",
     password: "",
   });
 
@@ -37,7 +37,7 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (credentials.username && credentials.name && credentials.password) {
+    if (credentials.username && credentials.password) {
       postData().then((response) => {
         console.log(response, "response");
         if (response.non_field_errors) {
@@ -46,8 +46,8 @@ function LoginForm() {
           return;
         }
         window.localStorage.setItem("token", response.token);
-        window.localStorage.setItem("username", credentials.username)
-        window.localStorage.setItem("name", credentials.name)
+        // window.localStorage.setItem("username", credentials.username)
+        // window.localStorage.setItem("name", credentials.name)
         window.localStorage.setItem("userID", response.id)
 
         history.push("/");
@@ -69,7 +69,9 @@ function LoginForm() {
           onChange={handleChange}
         />
       </div>
-      <div className="form-item">
+
+      {/* AA 29.11: commented the nickname box out - I dont think we need it */}
+      {/* <div className="form-item">
         <label htmlFor="name">Nickname:</label>
         <input
           type="text"
@@ -77,7 +79,7 @@ function LoginForm() {
           placeholder="Enter name"
           onChange={handleChange}
         />
-      </div>
+      </div> */}
       <div className="form-item">
         <label htmlFor="password">Password:</label>
         <input
