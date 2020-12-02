@@ -12,11 +12,19 @@ function ProductCard(props) {
         <div className="product-card">
         <Link to={`/products/${productData.id}`}>
             <img src={productData.image}/>
-            <div className="product-card-title">
-                <h3 className="model">{productData.model_tech}</h3>
-                <p className="overview">{productData.overview}</p>
-                <p className="price">${productData.price}</p>
-                <p className="see-details">See Details here<Link to={`/products/${productData.id}`}></Link></p>
+
+        </Link>
+            <div id="product-card-title">
+                <div className="product-desc">
+                    <div>
+                        <h3 className="model">{productData.model_tech}</h3>
+                        <p className="overview">{productData.overview}</p>
+                    </div>
+                    <p className="price">${productData.price}</p>
+                </div>
+                {/* <p class="price">Is fav: ${productData.is_fav}</p> */}
+                <Link to={`/products/${productData.id}`}><button id="btn-full-width">Show me more</button></Link>
+
 
         {/* ----------------------this is where the is_fav is displayed */}
         {/* Rather than printing This is fav, you can change for displaying an img */}
@@ -25,8 +33,8 @@ function ProductCard(props) {
                 </div>
 
                 <p></p>
+
             </div>
-        </Link>
         </div>
 );
 }

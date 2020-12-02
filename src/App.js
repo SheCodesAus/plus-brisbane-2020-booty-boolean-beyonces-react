@@ -22,7 +22,6 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div> 
 
       <div id="app-header"> 
       <Header />
@@ -79,7 +78,7 @@ function App() {
 
         </Switch>
 
-      </div>
+
     </Router>
   );
 }
