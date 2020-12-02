@@ -1,8 +1,9 @@
 import React from 'react';
 import "../App.css"
 import { Link } from "react-router-dom";
-import aboutus from "./aboutus.jpg";
-import OptIn_Logo from "./OptIn_Logo.png";
+import aboutus from "../components/assets/aboutus.jpg";
+
+import OptIn_Logo from "../components/assets/OptIn_Logo.png";
 
 
 function AboutPage() {

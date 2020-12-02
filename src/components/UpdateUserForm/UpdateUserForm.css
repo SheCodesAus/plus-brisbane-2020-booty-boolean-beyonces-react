@@ -1,0 +1,8 @@
+.update-user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-family: "Montserrat", Arial, sans-serif;
+}
