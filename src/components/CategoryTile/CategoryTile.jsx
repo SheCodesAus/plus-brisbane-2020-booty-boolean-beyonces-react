@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 function CategoryTile() {
     return (
+
         <div>
 
         <div className="category-section">
@@ -78,6 +79,7 @@ function CategoryTile() {
                 
         </div>
         </div>
+
 
     )
 };

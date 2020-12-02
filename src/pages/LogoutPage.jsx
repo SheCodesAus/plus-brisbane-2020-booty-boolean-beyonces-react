@@ -5,9 +5,12 @@ import "../App.css"
 function LogoutPage() {
     
     const token = window.localStorage.getItem("token")
+    // const userID = window.localStorage.getItem("userID")
     
     const removeToken = () => { 
         localStorage.removeItem("token")
+        localStorage.removeItem("userID")
+        // AA 01.12 - removed userID too when user logs out
     }
     
     const userLog = () => {

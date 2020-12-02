@@ -7,14 +7,29 @@ import { useHistory } from 'react-router-dom';
 
 import "../App.css";
 
-function ProductPage() {
+const token = window.localStorage.getItem("token")
 
-    const userID = window.localStorage.getItem("userID")
-    const [productData, setProductData] = useState([]);
-    const { id } = useParams();
-    const history = useHistory();
+function Loggedfetch(id, productData, setProductData){
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}/products/${id}`, {
+            method: "get",
+            headers: {
+                "Authorization": `Token ${token}`
 
-    // get product info from URL id
+            }
+
+        })
+        .then((results) => {
+            return results.json();
+        })
+        .then((data) => {
+            setProductData(data)
+        });
+    }, []);
+
+}
+
+function Notloggedfetch(id, productData, setProductData){
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/products/${id}`)
         .then((results) => {
@@ -24,6 +39,27 @@ function ProductPage() {
             setProductData(data)
         });
     }, []);
+
+}
+
+
+function ProductPage() {
+
+    const userID = window.localStorage.getItem("userID")
+    const [productData, setProductData] = useState([]);
+    const { id } = useParams();
+    const history = useHistory();
+    
+
+    // get product info from URL id
+    if (token){
+        Loggedfetch(id, productData, setProductData)
+    }
+
+    else {
+        Notloggedfetch(id, productData, setProductData)
+    }
+     
     
     // put request to update favs list for user
     const putData = async () => {
@@ -44,13 +80,18 @@ function ProductPage() {
 
     // function to handle the button clickity-click
     const handleSubmit = (e) => {
-        // console.log("testie")
+   
         e.preventDefault();
-
-        putData().then((response) => {
-            console.log(response)
-        history.push("/");
-        });
+        
+        if (token){
+            putData().then((response) => {
+                console.log(response)
+            history.push("/");
+            });
+        }
+        else{
+            window.alert("you need to be logged in to save to your favourites list")
+        }
         
     };
     
@@ -60,25 +101,27 @@ function ProductPage() {
 
       <div>
 
-      <img src={productData.image} class="product-card" />
+      <img src={productData.image} className="product-card" />
       <div className="outer-wrapper">
         <div className="project-details">
-        <h2 class="model">{productData.model_tech}</h2>
-        <p class="overview ">Why Opt-in? {productData.justification}</p>
-        <p class="overview ">{productData.brand}</p>
-        <p class="overview ">{productData.spec1}</p>
-        <p class="overview ">{productData.spec2}</p>
-        <p class="overview ">{productData.spec3}</p>
-        <p class="overview ">{productData.spec4}</p>
-        <p class="overview ">{productData.spec5}</p>
-        <p class="overview ">{productData.spec6}</p>
-        <p class="price">${productData.price}</p>
+        <h2 className="model">{productData.model_tech}</h2>
+        <p className="overview ">Why Opt-in? {productData.justification}</p>
+        <p className="overview ">{productData.brand}</p>
+        <p className="overview ">{productData.spec1}</p>
+        <p className="overview ">{productData.spec2}</p>
+        <p className="overview ">{productData.spec3}</p>
+        <p className="overview ">{productData.spec4}</p>
+        <p className="overview ">{productData.spec5}</p>
+        <p className="overview ">{productData.spec6}</p>
+        <p className="price">${productData.price}</p>
 
-        {/* <button className="blue-button-rounded" onClick={handleSubmit}>Add to Wishlist</button> */}
-        {/* <p class="see-details">Save To Your Favourites<Link onClick={handleSubmit}></Link></p> */}
+        {/* ----------------------this is where the is_fav is displayed */}
+        {/* Rather than printing This is fav, you can change for displaying an img */}
+        <div>
+            {productData.is_fav && <h2>This is a fav</h2>}
+        </div>
 
-        {/* AA 28.11: the above was not quite working, unsure why, changed to button below and the functionality works now */}
-
+     
         <button type="submit" className="see-details" onClick={handleSubmit}>
             Save To Your Favourites
         </button>
