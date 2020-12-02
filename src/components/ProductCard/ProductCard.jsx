@@ -5,8 +5,8 @@ import "./ProductCard.css";
 
 function ProductCard(props) {
     const { productData } = props;
-    // console.log("TEST")
-    // console.log(productData.id, productData.is_fav )
+    console.log("TEST")
+    console.log(productData.id, productData.is_fav )
 
     return (
         <div className="product-card">
