@@ -58,7 +58,7 @@ function LoginForm() {
 
   return (
     <form className="form-wrapper">
-      <h1 class="FormHeader">Login</h1>
+      <h1 className="FormHeader">Login</h1>
 
       <div className="form-item">
         <label htmlFor="username">Username:</label>
@@ -93,7 +93,7 @@ function LoginForm() {
         <button type="submit" onClick={handleSubmit} className="my-button"> 
           Login
         </button>
-        <div class="logout">
+        <div className="logout">
           <Link to="/logout">Logout</Link>
           </div>
       </div>

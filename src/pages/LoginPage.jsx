@@ -8,8 +8,8 @@ function LoginPage() {
     return ( 
     <div>
         <LoginForm />
-        <div class="no-account">
-            <p class="form-item">Don't have an account?</p>
+        <div className="no-account">
+            <p className="form-item">Don't have an account?</p>
             <Link to="/newuser"><button className="see-details">Create New User</button></Link>
         </div>
 
