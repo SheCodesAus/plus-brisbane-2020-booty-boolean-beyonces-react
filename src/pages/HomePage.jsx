@@ -16,10 +16,10 @@ import imagetick from "../components/assets/opt-in_mobile.jpg";
                 <div className="pink-tick-bg">
                     <div className="white-text-box">
                         <div>
-                            <h2 class="WelcomeHeader">Welcome to Opt-In</h2>
-                            <p class="WelcomeText-1">So… you need a new phone? Laptop? A million dollars?</p>
+                            <h2>Welcome to Opt-In</h2>
+                            <p>So… you need a new phone? Laptop? A million dollars?</p>
 
-                            <p class="WelcomeText-2">Well, we can’t really help you with the latter, but we can help 
+                            <p>Well, we can’t really help you with the latter, but we can help 
                                 you find the absolute best tech products available on the market today. 
                                 Our platform delivers you the top ten products in each category and 
                                 highlights what you actually need to know so that you can get the best for 
@@ -27,18 +27,10 @@ import imagetick from "../components/assets/opt-in_mobile.jpg";
                                 from industry experts, Opt-In is the nerdy friend everybody needs. <br></br><br></br>Browse products below.</p>
 
                         </div>
-
-                        <div> <img class="newtick" src={ imagetick } ></img>
-                        </div>
-
-
-
-
                     </div>
                 </div>
-                
-                {/* <LoginForm /> */}
                 <CategoryTile />
+
                 <USPGrid />
 
 
@@ -46,4 +38,6 @@ import imagetick from "../components/assets/opt-in_mobile.jpg";
         )
 
     }
+
+    
     export default HomePage;

@@ -8,9 +8,9 @@ function LoginPage() {
     return ( 
     <div>
         <LoginForm />
-        <div class="no-account">
-            <p class="form-item">Don't have an account?</p>
-            <Link to="/newuser"><button className="see-details">Create New User</button></Link>
+        <div className="no-account">
+            <p>Don't have an account?</p>
+            <Link to="/newuser"><button>Create New User</button></Link>
         </div>
 
 
