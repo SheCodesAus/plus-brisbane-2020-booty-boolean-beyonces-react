@@ -1,14 +1,24 @@
 import React from 'react';
 import "../App.css"
 import { Link } from "react-router-dom";
+import aboutus from "./aboutus.jpg";
+import OptIn_Logo from "./OptIn_Logo.png";
+
 
 function AboutPage() {
     return (
         <div>
-        <div>
-            <div>
+            <div id="about-us-header">
+                <img src={aboutus} />
+            </div>
+            <div className="about-logo">
+                <img src={OptIn_Logo} />
+            </div>
+            <div className="about-us-page">
 
-                <h2>About Us</h2>
+                <h2 id="category-h2">Who We Are</h2>
+
+                <div className="standard-copy">
 
                 <p>The rate of technological advancement in today’s world is… well, a bit bonkers. With over a million tech 
                     startups worldwide and a new product launching seemingly each day, it can be overwhelming for anyone to 
@@ -32,15 +42,12 @@ function AboutPage() {
 
                 <p>Opt-in was designed and built by the Booty Boolean Beyonce development team, a subsidiary of SheCodes Australia.</p>
             </div>
+            </div>
 
-        </div>
-        <div className="about-part-two">
-            <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" className="new-img" />
             <div className="button-wrapper">
-                <Link to="/projects"><button className="yellow-button">Browse All Products</button></Link>
+                <Link to="/projects"><button>Browse All Products</button></Link>
             </div>
             <p></p>
-        </div>
         </div>
     )
 

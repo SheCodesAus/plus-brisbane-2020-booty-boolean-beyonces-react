@@ -1,13 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Montserrat", sans-serif;
-  /* padding: 0 50px; */
+}
 
+p,
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .App {
   text-align: center;
+}
+
+#app-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -21,16 +34,9 @@ html {
   }
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-    max-width: 375px;
-
+.standard-copy {
+  width: 75%;
+  margin: 0 auto 2em;
 }
 
 #app-header {
@@ -38,8 +44,9 @@ html {
   justify-content: space-between;
   background-color: transparent;
   color: #1690b9;
-  background-color: white;
-  padding: 1em 0px;
+  padding: 1em 1em;
+  width: 100%;
+  /* max-width: 100vw; */
 }
 
 #app-header a {
@@ -53,14 +60,33 @@ html {
   color: #61dafb;
 }
 
-.blue-button-rounded {
+button {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   align-items: center;
-  padding: 16px 32px;
-  height: 61px;
+  padding: 8px 0px;
+  width: 66%;
   background: #1690b9;
   border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  transition-duration: 0.4s;
+  border: 2.5px solid #1690b9;
+  margin: 5% auto;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #1690b9;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
 }
 
 .button-wrapper {
@@ -72,11 +98,13 @@ html {
 }
 
 #product-list {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  row-gap: 15px;
   width: 100%;
-  margin-top: 70px;
+  margin: 0 auto;
+  width: 98%;
 }
 
 .product-img {
@@ -93,55 +121,166 @@ html {
 }
 
 .pink-tick-bg {
-  /* background-image: url("https://mcusercontent.com/76d630c2556092aa0fe86b37e/images/a68a0593-9b01-4273-a773-62bd5bfe6799.jpg"); */
-  /* background-color: #1690b9; */
-  position: absolute;
-  width: 375px;
-  height: 668px;
-  left: 0px;
-  top: 159px;
+  background-image: url("https://s3-alpha-sig.figma.com/img/09ae/fe71/2d8089c2aa8ae6b6dbda51aa5f642763?Expires=1607299200&Signature=YPJdfpLnFOG43PdkaxNSeIokQuWinK9gMFPv9rDnQY7vEX5irz7orgy1DD18ZM2BVjpRC5RxKt4WnVV-SHgAuiUF8njmIIlLJHZIvE8raB7dyTK31ii8pomBhaQWm3OHp8oxQS~4EtEphH2MzyDMnQDgM76pNNJ0J~JXYQG6qM7SGoCIgMIcUHYm7lst1KhZUO9sN-aOHGGDZa6iNfdK4~cPupwN76SOHu7P3128yZytYbXobL3D88-dnGSxjbiLeUJD8~cUCLtR1ZpxB7X9eup9GAGq-NuUBly5XP~nNcuhOeCuKsX7s6BFAThITulMSh2VpZYElBUx9HRVWC4UNQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: 50vw;
+  object-fit: contain;
+  width: 100%;
   display: flex;
-}
-
-.newtick {
-  background-size: 100% 100%;
-  background-repeat: repeat;
-  width: 375px;
-  height: 668px;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  padding: 15% 0;
 }
 
 .white-text-box {
-  position: absolute;
-  width: 331px;
-  height: 494px;
-  left: 23px;
-  top: 65px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  background: #FFFFFF;
-  
+  background-color: white;
+  width: 75%;
+  text-align: center;
+  position: relative;
+  display: flex;
 }
 
 .white-text-box > div {
-  padding: 10 10 10 10;
+  padding: 10px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white-text-box h2 {
+  color: #1690b9;
 }
 
-@media screen and (max-width: 700px) {
+.white-text-box p {
+  color: #373737;
+}
+
+.product-bg {
+  width: 375px;
+  height: 1298px;
+  background: rgba(226, 158, 166, 0.15);
+}
+
+.product-card img {
+  width: 340px;
+  height: 340px;
+  object-fit: 50%;
+  max-height: 30vh;
+  object-position: left;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.pro-model {
+  margin-top: 30px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  max-width: 340px;
+
+  /* Black */
+
+  color: #000000;
+}
+
+.price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+
+  /* Black */
+
+  color: #000000;
+}
+
+.no-account {
+  width: 75%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+#category-h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.category-desc {
+  font-family: Montserrat, Arial, sans-serif;
+  color: #373737;
+  width: 75%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+/* AA 29.11 CSS for user page - Feel free to change */
+
+.single-user {
+  color: #2f4f4f;
+  margin: 10px;
+  padding: 10px;
+  /* border-style: solid;
+  border-radius: 5%;
+  border-color: black; */
+  display: flex;
+}
+
+.single-user-box {
+  color: #2f4f4f;
+  margin: 10px;
+  padding: 10px;
+  /* border-style: solid;
+  border-radius: 5%;
+  border-color: black; */
+  width: 50%;
+}
+
+.single-user img {
+  width: 50%;
+  height: 75%;
+  object-fit: cover;
+  border-style: solid;
+  border-radius: 5%;
+  border-color: pink;
+}
+
+#about-us-header {
+  width: 100%;
+}
+
+#about-us-header img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.about-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-logo img {
+  width: 25%;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.about-us-page {
+  /* margin-top: 45vh; */
+}
+
+@media screen and (max-width: 800px) {
   #product-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -159,219 +298,43 @@ html {
   html {
     padding: 0 25px;
   }
+
+  #about-us-header img {
+    object-position: center;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  #product-list {
+    grid-template-columns: 1fr;
+  }
 
-
-
-.WelcomeHeader {
-  max-width: 337px;
-  height: 43px;
-  top: 27px;
-
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 37px;
-  text-align: center;
-  
-  color: #1690B9;
-  margin: 42px;
-  
+  .about-logo img {
+    width: 50%;
+  }
 }
 
-.WelcomeText-1 {
+@media screen and (max-width: 650px) {
+  button {
+    width: 100%;
+  }
 
-  position: absolute;
-  max-width: 337px;
-  height: 91px;
-  top: 67px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  /* or 143% */
-  
-  display: flex;
-  align-items: center;
-  text-align: center;
-  
-  color: #666666;
-  margin: 22px;
-  margin-top: 42px;
-  background-color: white;
-  padding: 10px;
+  .standard-copy {
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
 
-  
+  .about-logo img {
+    width: 40%;
+  }
 }
 
-
-.WelcomeText-2 {
-
-  position: absolute;
-  max-width: 337px;
-  top: 160px;
-  margin-top: 60px;
-  
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  /* or 143% */
-  
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  
-  color: #666666;
-  margin: 22px;
-  margin: 32px;
-  background-color: white;
-  padding: 20px;
-
-}
-
-
-.product-bg {
-
-  width: 375px;
-  height: 1298px;
-  background: rgba(226, 158, 166, 0.15);
-}
-
-
-
-
-
-.product-card img {
-  width: 340px;
-  height: 340px;
-  object-fit: 50%;
-  max-height: 30vh;
-  object-position: left;
-  background: #FFFFFF;
-  border-radius: 8px;
-}
-
-.product-card a {
-  text-decoration: none;
-}
-
-.pro-model {
-  margin-top: 30px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 16px;
-  max-width: 340px;
-
-  
-  /* Black */
-  
-  color: #000000;
-}
-
-
-
-
-
-.price {
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-/* Black */
-
-color: #000000;
-}
-
-
-.see-details {
-
-  background: #1690b9;
-  border-radius: 100px;
-  width: 330px;
-  padding: 16 32 16 32;
-  height: 52px;
-  display: flex;
-  align-items: center;
-
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  /* identical to box height */
-
-  text-align: center;
-  justify-content: center;
-
-  /* White */
-
-  color: #FFFFFF;
-}
-
-
-
-
-.no-account {
-  position: absolute;
-  width: 338px;
-  height: 39px;
-  left: 15px;
-  right: 15px;
-  top: 490px
-}
-
-
-/* AA 29.11 CSS for user page - Feel free to change */
-
-
-
-.single-user{
-  color:#2F4F4F;
-  margin: 10px;
-  padding: 10px;
-  /* border-style: solid;
-  border-radius: 5%;
-  border-color: black; */
-  display: flex;
-
-  
-}
-
-
-
-.single-user-box{
-  
-  color:#2F4F4F;
-  margin: 10px;
-  padding: 10px;
-  /* border-style: solid;
-  border-radius: 5%;
-  border-color: black; */
-  width:50%;
-
-}
-
-
-.single-user img{
-  width: 50%;
-  height: 75%;
-  object-fit: cover;
-  border-style: solid;
-  border-radius: 5%;
-  border-color: pink;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,410 +1,93 @@
-
-
-
-
-.CategoryTileBackground_lap {
-    position: absolute;
-    width: 380px;
-    height: 2800px;
-    left: 0px;
-    top: 1204px;
-
-    background: #f6ecf0;
+Link {
+  text-decoration: none;
 }
 
-.CategoryHeader {
-    position: absolute;
-    width: 338px;
-    height: 39px;
-    left: 15px;
-    top: 55px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 37px;
-    text-align: center;
-
-    color: #1690B9;
-
+.category-section {
+  background-color: #f6ecf0;
+  padding: 2em;
+  width: 100%;
 }
 
-.CategoryTileWrapper_lap {
-    background: #f6ecf0;
-
+.category-section > h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #1690b9;
+  padding-bottom: 2em;
+  font-size: 25px;
 }
 
-.CategoryImg_lap {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    left: 18px;
-    right: 18px;
-    top: 200px;  
-    background: #FFFFFF;
-    border-radius: 8px;
+.grid-wrapper-2x2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.CategoryHeading_lap {
-    position: absolute;
-    width: 67px;
-    height: 20px;
-    left: 17px;
-    top: 550px;
-    
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-      
-    color: #1690B9;    
+.grid-wrapper-2x2 > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+
+  font-family: Montserrat, Arial, sans-serif;
+  color: #373737;
 }
 
-
-.CategoryBodyCopy_lap {
-    position: absolute;
-    height: 453px;
-    left: 17px;
-    right: 18px;
-    top: 580px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: #666666;  
+.grid-wrapper-2x2 > div > h5 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 25px;
+  margin: 0.5em 0;
 }
 
-.Button_lap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    position: absolute;
-    height: 52px;
-    left: 18px;
-    right: 17px;
-    bottom: 3280px;
-    top: 710px;
-    width: 340px;
-    padding: 16 32 16 32;
-    
-    background: #1690b9;
-    border-radius: 100px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    /* identical to box height */
-
-    text-align: center;
-    justify-content: center;
-
-    /* White */
-
-    color: #FFFFFF;
-
-    /* Inside Auto Layout */
-
+.grid-wrapper-2x2 > div > p {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600px;
 }
 
-.Button_lap:hover {
-    background-color: #4fb2da;
+.img-white-bg {
+  background-color: white;
+  padding: 1.5em;
+  width: 100%;
+  border-radius: 20px;
 }
 
-
-
-
-
-
-
-.CategoryTileWrapper_phone {
-    background: #f6ecf0;
-
+.img-white-bg > img {
+  height: 100%;
+  object-fit: contain;
+  width: 80%;
 }
 
-.CategoryImg_phone {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    left: 18px;
-    right: 18px;
-    top: 2049px;  
-    background: #FFFFFF;
-    border-radius: 8px;
+/* desktop/laptop */
+
+@media (min-width: 1025px) {
+  .grid-wrapper-2x2 {
+    width: 80%;
+  }
 }
 
-.CategoryHeading_phone {
-    position: absolute;
-    width: 67px;
-    height: 20px;
-    left: 17px;
-    top: 2411px;
-    
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-      
-    color: #1690B9;    
+@media (max-width: 800px) {
+  .grid-wrapper-2x2 {
+    width: 100%;
+  }
 }
 
-
-.CategoryBodyCopy_phone {
-    position: absolute;
-    height: 453px;
-    left: 17px;
-    right: 18px;
-    top: 2440px;
-    max-width: 339px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: #666666;  
+.tick {
+  width: 41px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-.Button_phone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    position: absolute;
-    height: 52px;
-    left: 18px;
-    right: 17px;
-    bottom: 3280px;
-    top: 2569px;
-    width: 340px;
-    padding: 16 32 16 32;
-    
-    background: #1690b9;
-    border-radius: 100px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    /* identical to box height */
-
-    text-align: center;
-    justify-content: center;
-
-    /* White */
-
-    color: #FFFFFF;
-
-    /* Inside Auto Layout */
-
-}
-
-.Button_phone:hover {
-    background-color: #4fb2da;
-}
-
-
-
-
-
-
-.CategoryTileWrapper_tablet{
-    background: #f6ecf0;
-
-}
-
-.CategoryImg_tablet {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    left: 18px;
-    right: 18px;
-    top: 2707px;  
-    background: #FFFFFF;
-    border-radius: 8px;
-}
-
-.CategoryHeading_tablet {
-    position: absolute;
-    width: 67px;
-    height: 20px;
-    left: 17px;
-    top: 3076px;
-    
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-      
-    color: #1690B9;    
-}
-
-
-.CategoryBodyCopy_tablet {
-    position: absolute;
-    height: 453px;
-    left: 17px;
-    right: 18px;
-    top: 3108px;
-    max-width: 339px;
-
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: #666666;  
-}
-
-.Button_tablet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    position: absolute;
-    height: 52px;
-    left: 18px;
-    right: 17px;
-    bottom: 3280px;
-    top: 3220px;
-    width: 340px;
-    padding: 16 32 16 32;
-    
-    background: #1690b9;
-    border-radius: 100px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    /* identical to box height */
-
-    text-align: center;
-    justify-content: center;
-
-    /* White */
-
-    color: #FFFFFF;
-
-    /* Inside Auto Layout */
-
-}
-
-.Button_tablet:hover {
-    background-color: #4fb2da;
-}
-
-
-
-
-.CategoryTileWrapper_acc{
-    background: #f6ecf0;
-
-}
-
-.CategoryImg_acc {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    left: 18px;
-    right: 18px;
-    top: 3354px;  
-    background: #FFFFFF;
-    border-radius: 8px;
-}
-
-.CategoryHeading_acc {
-    position: absolute;
-    width: 67px;
-    height: 20px;
-    left: 17px;
-    top: 3720px;
-    
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-      
-    color: #1690B9;    
-}
-
-
-.CategoryBodyCopy_acc {
-    position: absolute;
-    height: 453px;
-    left: 17px;
-    right: 18px;
-    top: 3753px;
-    max-width: 339px;
-
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: #666666;  
-}
-
-.Button_acc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    position: absolute;
-    height: 52px;
-    left: 18px;
-    right: 17px;
-    bottom: 3280px;
-    top: 3847px;
-    width: 330px;
-    padding: 16 32 16 32;
-    
-    background: #1690b9;
-    border-radius: 100px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    /* identical to box height */
-
-    text-align: center;
-    justify-content: center;
-
-    /* White */
-
-    color: #FFFFFF;
-
-    /* Inside Auto Layout */
-
-}
-
-.Button_acc:hover {
-    background-color: #4fb2da;
+/* tablet */
+@media (max-width: 560px) {
+  .grid-wrapper-2x2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 50px;
+    /* column-gap: 10px; */
+  }
 }

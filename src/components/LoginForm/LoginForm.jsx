@@ -58,7 +58,9 @@ function LoginForm() {
 
   return (
     <form className="form-wrapper">
-      <h1 className="FormHeader">Login</h1>
+
+      <h2 id="category-h2">Login</h2>
+
 
       <div className="form-item">
         <label htmlFor="username">Username:</label>
@@ -69,17 +71,6 @@ function LoginForm() {
           onChange={handleChange}
         />
       </div>
-
-      {/* AA 29.11: commented the nickname box out - I dont think we need it */}
-      {/* <div className="form-item">
-        <label htmlFor="name">Nickname:</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter name"
-          onChange={handleChange}
-        />
-      </div> */}
       <div className="form-item">
         <label htmlFor="password">Password:</label>
         <input
