@@ -27,6 +27,8 @@ import imagetick from "../components/assets/opt-in_mobile.jpg";
                                 from industry experts, Opt-In is the nerdy friend everybody needs. <br></br><br></br>Browse products below.</p>
 
                         </div>
+
+
                     </div>
                 </div>
                 <CategoryTile />

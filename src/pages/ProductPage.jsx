@@ -7,14 +7,29 @@ import jbhifi from "../components/assets/jbhifi.jpg";
 
 import "../App.css";
 
-function ProductPage() {
+const token = window.localStorage.getItem("token")
 
-    const userID = window.localStorage.getItem("userID")
-    const [productData, setProductData] = useState([]);
-    const { id } = useParams();
-    const history = useHistory();
+function Loggedfetch(id, productData, setProductData){
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}/products/${id}`, {
+            method: "get",
+            headers: {
+                "Authorization": `Token ${token}`
 
-    // get product info from URL id
+            }
+
+        })
+        .then((results) => {
+            return results.json();
+        })
+        .then((data) => {
+            setProductData(data)
+        });
+    }, []);
+
+}
+
+function Notloggedfetch(id, productData, setProductData){
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/products/${id}`)
         .then((results) => {
@@ -24,6 +39,27 @@ function ProductPage() {
             setProductData(data)
         });
     }, []);
+
+}
+
+
+function ProductPage() {
+
+    const userID = window.localStorage.getItem("userID")
+    const [productData, setProductData] = useState([]);
+    const { id } = useParams();
+    const history = useHistory();
+    
+
+    // get product info from URL id
+    if (token){
+        Loggedfetch(id, productData, setProductData)
+    }
+
+    else {
+        Notloggedfetch(id, productData, setProductData)
+    }
+     
     
     // put request to update favs list for user
     const putData = async () => {
@@ -44,13 +80,18 @@ function ProductPage() {
 
     // function to handle the button clickity-click
     const handleSubmit = (e) => {
-        // console.log("testie")
+   
         e.preventDefault();
-
-        putData().then((response) => {
-            console.log(response)
-        history.push("/");
-        });
+        
+        if (token){
+            putData().then((response) => {
+                console.log(response)
+            history.push("/");
+            });
+        }
+        else{
+            window.alert("you need to be logged in to save to your favourites list")
+        }
         
     };
     

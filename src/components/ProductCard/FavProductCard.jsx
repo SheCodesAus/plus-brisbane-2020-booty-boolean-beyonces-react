@@ -48,11 +48,13 @@ function FavProductCard(props) {
         <Link to={`/products/${productData.id}`}>
             <img src={productData.image}/>
             <div className="product-card-title">
-                <h3 class="model">{productData.model_tech}</h3>
-                <p class="overview">{productData.overview}</p>
-                <p class="price">${productData.price}</p>
-                <p class="see-details">See Details here<Link to={`/products/${productData.id}`}></Link></p>
-                
+                <h3 className="model">{productData.model_tech}</h3>
+                <p className="overview">{productData.overview}</p>
+                <p className="price">${productData.price}</p>
+                <p className="see-details">See Details here<Link to={`/products/${productData.id}`}></Link></p>
+
+
+
                 {/* AA 29.11: Delete button */}
                 <button type="submit" className="see-details" onClick={handleSubmit}>
                     Delete From Your Favourites
