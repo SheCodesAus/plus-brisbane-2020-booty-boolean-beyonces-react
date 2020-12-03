@@ -2,16 +2,23 @@
   display: flex;
   justify-content: space-evenly;
   flex-basis: 40%;
-  align-items: center;
+  align-items: top;
   flex-wrap: wrap;
+  font-size: 16px;
+  align-content: top;
+  margin-top: 2.5em;
 }
 
 Link {
   padding: 0.5em;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .nav-bar {
     justify-content: flex-end;
+  }
+
+  .nav-bar a {
+    padding: 0;
   }
 }

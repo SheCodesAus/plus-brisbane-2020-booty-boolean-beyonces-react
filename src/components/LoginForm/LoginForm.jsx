@@ -48,7 +48,7 @@ function LoginForm() {
         // window.localStorage.setItem("username", credentials.username)
         // window.localStorage.setItem("name", credentials.name)
         window.localStorage.setItem("userID", response.id)
-
+        window.location.reload();
         history.push("/");
       });
     }
@@ -81,7 +81,7 @@ function LoginForm() {
         />
       </div>
       <div className="login-buttons">
-        <button type="submit" onClick={handleSubmit} className="my-button"> 
+        <button type="submit" onClick={handleSubmit}> 
           Login
         </button>
       </div>

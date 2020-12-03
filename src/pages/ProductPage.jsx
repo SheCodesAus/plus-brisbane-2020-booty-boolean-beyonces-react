@@ -110,14 +110,14 @@ function ProductPage() {
     }
 
     const favButton = inFavList()
-    
+
 
       
     return (
 
       <div>
 
-          <div className="product-wrapper">
+          <div className="product-wrapper">      
           <h3>{productData.model_tech}</h3>
           <p>{productData.overview}</p>
               <div className="grid-wrapper-2x2"> 

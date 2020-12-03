@@ -15,6 +15,7 @@ import ProductPage from "./pages/ProductPage";
 import CategoryListPage from "./pages/CategoryListPage";
 import UserPage from "./pages/UserPage";
 import FavPage from "./pages/FavPage";
+import OopsPage from "./pages/OopsPage";
 
 import './App.css';
 import NewUserPage from './pages/NewUserPage';
@@ -69,14 +70,19 @@ function App() {
             <NewUserPage />
           </Route>
 
+
+          <Route path="/oops">
+            <OopsPage />
+          </Route>
+
           <Route path="/:category">
             <CategoryListPage />
           </Route>
 
+
           <Route path="/">
               <HomePage />
           </Route>
-
 
         </Switch>
 
