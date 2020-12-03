@@ -104,7 +104,7 @@ function Notloggedfetch(category, categoryList, setCategoryList) {
         <div>
             <div>
                 <h2 id="category-h2">{thisCat}</h2>
-                <p className="category-desc">{descPartOne}</p>
+            <p className="category-desc">{descPartOne}</p>
             <p className="category-desc">{descPartTwo}</p>
             </div>
                 <div id="product-list">

@@ -17,6 +17,7 @@ import UserPage from "./pages/UserPage";
 import FavPage from "./pages/FavPage";
 
 import './App.css';
+import NewUserPage from './pages/NewUserPage';
 
 
 function App() {
@@ -64,12 +65,13 @@ function App() {
             <AboutPage />
           </Route>
 
+          <Route path="/newuser">
+            <NewUserPage />
+          </Route>
+
           <Route path="/:category">
             <CategoryListPage />
           </Route>
-
-        
-          
 
           <Route path="/">
               <HomePage />

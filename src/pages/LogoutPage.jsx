@@ -28,7 +28,10 @@ function LogoutPage() {
     const Log = userLog()
 
     return (
-    <h5>{Log}</h5>
+      <div>
+        <p>See ya later, alligator!</p>
+        <h3>{Log}</h3>
+      </div>
     )
     
    }

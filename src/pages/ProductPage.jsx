@@ -90,10 +90,26 @@ function ProductPage() {
             });
         }
         else{
-            window.alert("you need to be logged in to save to your favourites list")
+            window.alert("You need to be logged in to save to your favourites list")
         }
         
     };
+
+    const inFavList = () => {
+        if (productData.is_fav) {
+            return (
+                <div>
+                    <p>This product is already on your favourites list!</p>
+                    <Link to="/Fav"><button>Go to List</button></Link>
+                </div>
+            )
+        }
+        return (
+            <button type="submit" onClick={handleSubmit}>Save To Your Favourites</button>
+        )
+    }
+
+    const favButton = inFavList()
     
 
       
@@ -120,9 +136,11 @@ function ProductPage() {
                     <p class="overview ">{productData.spec5}</p>
                     <p class="overview ">{productData.spec6}</p>
                     <p class="price">${productData.price}</p>
-                    <button type="submit" onClick={handleSubmit}>
-                        Save To Your Favourites
-                    </button>
+
+                    <div>
+                        {favButton}
+                    </div>
+
                   </div>
 
               </div>

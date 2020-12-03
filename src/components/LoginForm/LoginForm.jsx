@@ -6,7 +6,6 @@ import "./LoginForm.css"
 function LoginForm() {
   const [credentials, setCredentials] = useState({
     username: "",
-    // name: "",
     password: "",
   });
 
@@ -60,6 +59,7 @@ function LoginForm() {
     <form className="form-wrapper">
 
       <h2 id="category-h2">Login</h2>
+      <p>We thought you looked familiar… log in using your details here.</p>
 
 
       <div className="form-item">
@@ -84,9 +84,6 @@ function LoginForm() {
         <button type="submit" onClick={handleSubmit} className="my-button"> 
           Login
         </button>
-        <div className="logout">
-          <Link to="/logout">Logout</Link>
-          </div>
       </div>
     </form>
   );

@@ -40,6 +40,10 @@ function UserPage() {
                         
                         <UpdateUserForm />
 
+                        <div className="logout">
+                            <Link to="/logout">Logout</Link>
+                        </div>
+
                     </div>
             </div>
 

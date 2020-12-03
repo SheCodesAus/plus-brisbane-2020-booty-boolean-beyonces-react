@@ -7,6 +7,7 @@ import "../App.css"
 function LoginPage() {
     return ( 
     <div>
+        
         <LoginForm />
         <div className="no-account">
 

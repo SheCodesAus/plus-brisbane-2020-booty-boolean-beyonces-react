@@ -19,9 +19,6 @@ function FavPage() {
         });
     }, []);
 
-    // console.log("test")
-    // console.log(userData.fav)
-    // console.log(userData.fav.length)
 
 
     return (

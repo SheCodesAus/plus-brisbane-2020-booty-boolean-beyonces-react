@@ -30,7 +30,6 @@ function FavProductCard(props) {
 
     // function to handle the button clickity-click
     const handleSubmit = (e) => {
-        console.log("testie")
         e.preventDefault();
 
         putData().then((response) => {
@@ -45,6 +44,9 @@ function FavProductCard(props) {
 
     return (
         <div className="product-card">
+        <button id="delete-button" type="submit" onClick={handleSubmit}>
+            X
+        </button>
         <Link to={`/products/${productData.id}`}>
             <img src={productData.image}/>
             <div className="product-card-title">
@@ -56,9 +58,7 @@ function FavProductCard(props) {
 
 
                 {/* AA 29.11: Delete button */}
-                <button type="submit" className="see-details" onClick={handleSubmit}>
-                    Delete From Your Favourites
-                </button>
+
                 <p></p>
             </div>
         </Link>
