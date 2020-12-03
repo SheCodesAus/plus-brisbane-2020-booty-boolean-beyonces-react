@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link, List } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
-// import JB from "../assets/images.png";
-
+import "./ProductPage.css"
+import jbhifi from "../components/assets/jbhifi.jpg";
 
 import "../App.css";
 
@@ -86,52 +86,73 @@ function ProductPage() {
         if (token){
             putData().then((response) => {
                 console.log(response)
-            history.push("/");
+            history.push("/fav");
             });
         }
         else{
-            window.alert("you need to be logged in to save to your favourites list")
+            window.alert("You need to be logged in to save to your favourites list")
         }
         
     };
-    
+
+    const inFavList = () => {
+        if (productData.is_fav) {
+            return (
+                <div>
+                    <p>This product is already on your favourites list!</p>
+                    <Link to="/Fav"><button>Go to List</button></Link>
+                </div>
+            )
+        }
+        return (
+            <button type="submit" onClick={handleSubmit}>Save To Your Favourites</button>
+        )
+    }
+
+    const favButton = inFavList()
+
 
       
     return (
 
       <div>
 
-      <img src={productData.image} className="product-card" />
-      <div className="outer-wrapper">
-        <div className="project-details">
-        <h2 className="model">{productData.model_tech}</h2>
-        <p className="overview ">Why Opt-in? {productData.justification}</p>
-        <p className="overview ">{productData.brand}</p>
-        <p className="overview ">{productData.spec1}</p>
-        <p className="overview ">{productData.spec2}</p>
-        <p className="overview ">{productData.spec3}</p>
-        <p className="overview ">{productData.spec4}</p>
-        <p className="overview ">{productData.spec5}</p>
-        <p className="overview ">{productData.spec6}</p>
-        <p className="price">${productData.price}</p>
+          <div className="product-wrapper">      
+          <h3>{productData.model_tech}</h3>
+          <p>{productData.overview}</p>
+              <div className="grid-wrapper-2x2"> 
+                  <div>
+                  <div className="img-white-bg">
+                        <img src={productData.image} />
+                    </div>
+                  </div>
+                  <div>
+                  
+                    <p class="overview "><i>Why we think you should Opt-in...</i></p>
+                    <p class="overview ">{productData.justification}</p>
+                    <p class="overview ">{productData.brand}</p>
+                    <p class="overview ">{productData.spec1}</p>
+                    <p class="overview ">{productData.spec2}</p>
+                    <p class="overview ">{productData.spec3}</p>
+                    <p class="overview ">{productData.spec4}</p>
+                    <p class="overview ">{productData.spec5}</p>
+                    <p class="overview ">{productData.spec6}</p>
+                    <p class="price">${productData.price}</p>
 
-        {/* ----------------------this is where the is_fav is displayed */}
-        {/* Rather than printing This is fav, you can change for displaying an img */}
-        <div>
-            {productData.is_fav && <h2>This is a fav</h2>}
-        </div>
+                    <div>
+                        {favButton}
+                    </div>
 
-     
-        <button type="submit" className="see-details" onClick={handleSubmit}>
-            Save To Your Favourites
-        </button>
+                  </div>
 
-        <p>{productData.supplier1}</p>
-
-        {/* <Link to={productData.supplier1}> <img class="SupplierLogo" src={JB} alt="Go to JB HiFi Product Listing" /> </Link> */}
-
-      </div>
-      </div>
+              </div>
+                <div className="supplier">
+                    <p>The {productData.model_tech} is available at:</p>
+                    <Link to={`/products/${productData.supplier1}`}>
+                        <img src="https://theme.zdassets.com/theme_assets/9481415/ca04e11084c5c97a4022fa6831761b32566428d5.png" className="supplier-logo"/>
+                    </Link>
+                </div>
+          </div>
 
       
   </div>

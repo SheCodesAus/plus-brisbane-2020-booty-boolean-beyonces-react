@@ -7,17 +7,24 @@ p {
   width: 75%;
   padding: 1em;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .form-item {
   display: flex;
   justify-content: space-between;
-  margin: 0.5em 2em;
+  margin: 1em 2em;
   font-family: Montserrat, sans-serif;
+  width: 100%;
+  max-width: 550px;
+  align-self: center;
 }
 
 .login-buttons {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 100%;
   text-align: center;
 }
@@ -40,4 +47,19 @@ p {
 
 a {
   color: #e29ea6;
+}
+
+@media screen and (max-width: 500px) {
+  .form-item {
+    flex-wrap: wrap;
+  }
+
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form-item {
+  }
 }

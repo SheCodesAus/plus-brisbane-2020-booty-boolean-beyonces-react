@@ -1,13 +1,13 @@
-img {
+.my-header img {
   width: 100%;
-  width: 10vw;
+  width: 15vw;
   min-width: 100px;
 }
 
 .my-header {
   display: flex;
   flex-basis: 50%;
-  align-items: center;
+  align-items: top;
   flex-wrap: nowrap;
   justify-content: left;
 }

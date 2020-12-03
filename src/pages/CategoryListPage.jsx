@@ -6,9 +6,12 @@ import "../App.css";
 
 
 
+function CategoryListPage () {
 
     const category = useParams();
     const [categoryList, setCategoryList] = useState([]);
+    const token = window.localStorage.getItem("token")
+
 
 // AA 02.12: needed to define 2 different fetches, one for when you are logged in and you pass the token and 
 // another one for when you are not logged in, and there is no token to pass. 
@@ -17,10 +20,8 @@ import "../App.css";
 // within the CategoryListPage function, we check if there is a token then the loggedfetch is used, otherwise, the 
 // notloggedinfetch is used
 
-const token = window.localStorage.getItem("token")
 
-
-function Loggedfetch(category, categoryList, setCategoryList){
+    function Loggedfetch(category, categoryList, setCategoryList){
 
 
     useEffect(() => {
@@ -89,16 +90,6 @@ function Notloggedfetch(category, categoryList, setCategoryList) {
     const thisCat = displayCat()
     const descPartOne = displayDesc1()
     const descPartTwo = displayDesc2()
-
-
-
-function CategoryListPage () {
-    const category = useParams();
-    const [categoryList, setCategoryList] = useState([]);
-    // const category = useParams();
-    // const category = props;
-    // const [categoryList, setCategoryList] = useState([]);
-    // const token = window.localStorage.getItem("token")
  
 
     if (token){
@@ -113,7 +104,7 @@ function CategoryListPage () {
         <div>
             <div>
                 <h2 id="category-h2">{thisCat}</h2>
-                <p className="category-desc">{descPartOne}</p>
+            <p className="category-desc">{descPartOne}</p>
             <p className="category-desc">{descPartTwo}</p>
             </div>
                 <div id="product-list">

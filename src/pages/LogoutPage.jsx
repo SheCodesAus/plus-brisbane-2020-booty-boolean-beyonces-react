@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "../App.css"
+import { useHistory } from 'react-router-dom';
 
 function LogoutPage() {
     
     const token = window.localStorage.getItem("token")
     // const userID = window.localStorage.getItem("userID")
+    const history = useHistory();
     
     const removeToken = () => { 
         localStorage.removeItem("token")
         localStorage.removeItem("userID")
+        window.location.reload();
+        history.push("/");
         // AA 01.12 - removed userID too when user logs out
     }
     
@@ -28,7 +32,10 @@ function LogoutPage() {
     const Log = userLog()
 
     return (
-    <h5>{Log}</h5>
+      <div>
+        <p>See ya later, alligator!</p>
+        <h3>{Log}</h3>
+      </div>
     )
     
    }
