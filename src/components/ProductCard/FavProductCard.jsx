@@ -43,25 +43,24 @@ function FavProductCard(props) {
 
 
     return (
-        <div className="product-card">
-        <button id="delete-button" type="submit" onClick={handleSubmit}>
-            X
-        </button>
-        <Link to={`/products/${productData.id}`}>
-            <img src={productData.image}/>
-            <div className="product-card-title">
-                <h3 className="model">{productData.model_tech}</h3>
-                <p className="overview">{productData.overview}</p>
-                <p className="price">${productData.price}</p>
-                <p className="see-details">See Details here<Link to={`/products/${productData.id}`}></Link></p>
+        <div className="product-card" id="fav-card">
+        <button id="delete-button" type="submit" onClick={handleSubmit}>X</button>
+            <Link to={`/products/${productData.id}`}>
+                <img src={productData.image}/>
+            </Link>
+            <div id="product-card-title">
+                <div>
+                    <h3 className="model">{productData.model_tech}</h3>
+                    <p className="overview">{productData.spec2}</p>
+                    <p className="overview">{productData.spec3}</p>
+                    <p className="overview">{productData.spec5}</p>
+                    <p className="price">${productData.price}</p>
+                </div>
 
-
-
-                {/* AA 29.11: Delete button */}
-
-                <p></p>
+                <Link to={`/products/${productData.id}`}><button>See Details </button></Link>
             </div>
-        </Link>
+
+        
         </div>
 );
 }

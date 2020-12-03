@@ -86,7 +86,7 @@ function ProductPage() {
         if (token){
             putData().then((response) => {
                 console.log(response)
-            history.push("/");
+            history.push("/fav");
             });
         }
         else{
@@ -118,7 +118,8 @@ function ProductPage() {
       <div>
 
           <div className="product-wrapper">
-          <h2 class="model">{productData.model_tech}</h2>
+          <h3>{productData.model_tech}</h3>
+          <p>{productData.overview}</p>
               <div className="grid-wrapper-2x2"> 
                   <div>
                   <div className="img-white-bg">
@@ -127,7 +128,8 @@ function ProductPage() {
                   </div>
                   <div>
                   
-                    <p class="overview ">Why Opt-in? {productData.justification}</p>
+                    <p class="overview "><i>Why we think you should Opt-in...</i></p>
+                    <p class="overview ">{productData.justification}</p>
                     <p class="overview ">{productData.brand}</p>
                     <p class="overview ">{productData.spec1}</p>
                     <p class="overview ">{productData.spec2}</p>
@@ -144,31 +146,13 @@ function ProductPage() {
                   </div>
 
               </div>
+                <div className="supplier">
+                    <p>The {productData.model_tech} is available at:</p>
+                    <Link to={`/products/${productData.supplier1}`}>
+                        <img src="https://theme.zdassets.com/theme_assets/9481415/ca04e11084c5c97a4022fa6831761b32566428d5.png" className="supplier-logo"/>
+                    </Link>
+                </div>
           </div>
-
-      
-      <div className="outer-wrapper">
-        <div className="project-details">
-        
-
-        {/* <button className="blue-button-rounded" onClick={handleSubmit}>Add to Wishlist</button> */}
-        {/* <p class="see-details">Save To Your Favourites<Link onClick={handleSubmit}></Link></p> */}
-
-        {/* AA 28.11: the above was not quite working, unsure why, changed to button below and the functionality works now */}
-
-
-        
-    <p>Shop the {productData.model_tech} here!</p>
-
-        <Link to={`/products/${productData.supplier1}`}>
-            <img src={jbhifi}/>
-        </Link>
-
-
-        {/* <Link to={productData.supplier1}> <img class="SupplierLogo" src={JB} alt="Go to JB HiFi Product Listing" /> </Link> */}
-
-      </div>
-      </div>
 
       
   </div>

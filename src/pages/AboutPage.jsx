@@ -45,8 +45,11 @@ function AboutPage() {
             </div>
             </div>
 
-            <div className="button-wrapper">
-                <Link to="/projects"><button>Browse All Products</button></Link>
+            <div className="about-button-wrapper">
+                <Link to="/laptop"><button>Browse Laptops</button></Link>
+                <Link to="/phone"><button>Browse Phones</button></Link>
+                <Link to="/tablet"><button>Browse Tablets</button></Link>
+                <Link to="/accessory"><button>Browse Accessories</button></Link>
             </div>
             <p></p>
         </div>

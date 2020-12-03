@@ -1,0 +1,102 @@
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.button-wrapper a {
+  margin: 0 0.75em;
+}
+
+.toggle-button {
+  background-color: #e29ea6;
+  border: #e29ea6 2px solid;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.toggle-button:hover {
+  background-color: white;
+  color: #e29ea6;
+}
+
+.toggle-button:disabled {
+  background-color: #f6ecf0;
+  border: 2px solid #f6ecf0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  height: 40px;
+  background-color: #e5e5e5;
+  color: #373737;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.switch.off,
+.switch.on {
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.switch.off:before,
+.switch.off:after {
+  -webkit-transition: 0.4s;
+  transition: all 0.4s;
+}
+
+.switch.on:before,
+.switch.on:after {
+  -webkit-transition: 0.4s;
+  transition: all 0.4s;
+}
+
+.switch.off:before,
+.switch.on:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  left: 0px;
+  top: 0px;
+  background-color: #f6ecf0;
+  -webkit-transition: 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.01s;
+  transition-delay: 0.01s;
+  -moz-box-shadow: inset -8px -8px 6px -6px #f6ecf0;
+  -webkit-box-shadow: inset -8px -8px 6px -6px #f6ecf0;
+  border-radius: 20px;
+  box-shadow: inset -8px -8px 6px -6px #f6ecf0;
+}
+
+.switch.off:after {
+  display: block;
+  position: relative;
+  content: "Profile";
+  text-align: left;
+  padding-left: 12.5%;
+}
+
+.switch.on:before {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.switch.on:after {
+  position: relative;
+  content: "Favourites";
+  text-align: right;
+  padding-right: 10%;
+  display: block;
+}

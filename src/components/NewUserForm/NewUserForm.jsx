@@ -36,16 +36,17 @@ function NewUserForm () {
             body: JSON.stringify(user),
             }
             );
+            console.log(response)
             return response.json();
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (user.username && user.first_name && user.last_name && user.email && user.profile_picture && user.business_name && user.password) {
+        if (user.username) {
         postData().then((response) => {
             console.log(response)
         setUser("user", response.user);
-        history.push("/users/");
+        history.push("/");
         });
         }
     };

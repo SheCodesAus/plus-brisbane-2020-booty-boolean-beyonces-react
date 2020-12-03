@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
-
+import OptIn_Logo from "../assets/OptIn_Logo.png";
+import OptIn_OpenCircle from "../assets/OptIn_OpenCircle.png";
 
 function ProductCard(props) {
     const { productData } = props;
@@ -10,9 +11,20 @@ function ProductCard(props) {
 
     return (
         <div className="product-card">
+        <div className="fav-icon">
+            {productData.is_fav ? 
+                <div className="fav-icon-inner">
+                    <img src={OptIn_Logo} id="on-fav-list"/> 
+                    <p className="faded-text">On your list!</p>
+                </div> 
+                :
+                <div className="fav-icon-inner">
+                    <img src={OptIn_OpenCircle} id="on-fav-list"/> 
+                </div>            
+            }
+        </div>
         <Link to={`/products/${productData.id}`}>
             <img src={productData.image}/>
-
         </Link>
             <div id="product-card-title">
                 <div className="product-desc">
@@ -28,9 +40,7 @@ function ProductCard(props) {
 
         {/* ----------------------this is where the is_fav is displayed */}
         {/* Rather than printing This is fav, you can change for displaying an img */}
-                <div>
-                    {productData.is_fav && <h2>This is a fav</h2>}
-                </div>
+
 
                 <p></p>
 

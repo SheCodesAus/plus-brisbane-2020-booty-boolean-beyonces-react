@@ -5,6 +5,7 @@ import { Link, List } from "react-router-dom";
 import LoginForm from "../components/LoginForm/LoginForm";
 import UpdateUserForm from "../components/UpdateUserForm/UpdateUserForm"
 import macbook from "../components/assets/macbook.jpg";
+import ProfileToggle from "../components/ProfileToggle/ProfileToggle"
 
 function UserPage() {
     const [userData, setUserData] = useState ([]); 
@@ -26,12 +27,15 @@ function UserPage() {
         if (usid) {
             return (
                 <div>
+                    <h2 className="white-header">Profile</h2>
                     <div className="profile-photo-wrapper">
-                        <div className="profile-header"></div>
+                        <div className="profile-header light-pink-bg"></div>
                         <div className="profile-photo" alt="User Profile Image">
-                            <img src={userData.image} onerror="this.src='../components/assets/macbook.jpg'"/>
+                            <img src={userData.image}/>
                         </div>
                     </div>
+
+                    <ProfileToggle />
 
 
                     <div className="single-user">
