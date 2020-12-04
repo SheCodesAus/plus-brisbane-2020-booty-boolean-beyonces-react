@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard/ProductCard";
 import "../App.css";
+import DropdownMenu from "../components/DropdownMenu/DropdownMenu";
 
 // AA 02.12: needed to define 2 different fetches, one for when you are logged in and you pass the token and 
 // another one for when you are not logged in, and there is no token to pass. 
@@ -56,7 +57,10 @@ function ProductListPage() {
      
     return (
 
+    
+
     <div>
+
 
         <div className="product-bg">
 

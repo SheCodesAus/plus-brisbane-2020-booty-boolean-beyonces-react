@@ -5,6 +5,7 @@ import "../App.css"
 import CategoryTile from "../components/CategoryTile/CategoryTile";
 import USPGrid from "../components/USPGrid/USPGrid";
 import imagetick from "../components/assets/opt-in_mobile.jpg";
+import DropdownBar from "../components/DropdownBar/DropdownBar";
 
 
 
@@ -12,7 +13,9 @@ import imagetick from "../components/assets/opt-in_mobile.jpg";
     function HomePage() {
 
         return (
+            
             <div>
+                {/* <DropdownBar /> */}
                 <div className="pink-tick-bg">
                     <div className="white-text-box">
                         <div>

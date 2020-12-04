@@ -2,18 +2,19 @@ Link {
   text-decoration: none;
 }
 
-.category-section {
+.product-wrapper {
   background-color: #f6ecf0;
   padding: 2em;
   width: 100%;
 }
 
-.category-section > h2 {
+.product-wrapper > h3 {
   text-align: center;
+  text-transform: uppercase;
   color: #1690b9;
-  padding: 1em;
+  padding-bottom: 1em;
+  font-size: 25px;
 }
-
 
 .grid-wrapper-2x2 {
   position: relative;
@@ -25,12 +26,29 @@ Link {
   margin: 0 auto;
 }
 
+.product-page {
+  position: relative;
+  display: grid;
+  grid-template-columns: 60% 38%;
+  column-gap: 20px;
+  row-gap: 50px;
+  margin: 0 auto;
+}
+
+.product-page > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+  font-family: Montserrat, Arial, sans-serif;
+  color: #373737;
+}
+
 .grid-wrapper-2x2 > div {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-items: center;
-
   font-family: Montserrat, Arial, sans-serif;
   color: #373737;
 }
@@ -38,7 +56,6 @@ Link {
 .grid-wrapper-2x2 > div > h5 {
   font-family: Montserrat, Arial, sans-serif;
   font-size: 25px;
-  padding-top: 20px;
   margin: 0.5em 0;
 }
 
@@ -48,46 +65,55 @@ Link {
   font-weight: 600px;
 }
 
+.supplier {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.supplier-logo {
+  width: 20%;
+  text-align: center;
+}
+
 .img-white-bg {
   background-color: white;
   padding: 1.5em;
+  height: 100%;
   width: 100%;
   border-radius: 20px;
 }
 
 .img-white-bg > img {
   height: 100%;
-  object-fit: contain;
-  width: 80%;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* desktop/laptop */
-
-@media (min-width: 1025px) {
-  .grid-wrapper-2x2 {
-    width: 80%;
-  }
-}
-
 @media (max-width: 800px) {
   .grid-wrapper-2x2 {
     width: 100%;
   }
+
+  .product-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 50px;
+  }
 }
 
-.tick {
-  width: 41px;
-  height: 50px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+@media (min-width: 1025px) {
+  .product-page {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /* tablet */
-@media (max-width: 498px) {
+@media (max-width: 560px) {
   .grid-wrapper-2x2 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 50px;
-    /* column-gap: 10px; */
   }
 }

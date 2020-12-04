@@ -1,8 +1,11 @@
 import React,  { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom" 
-// the above allows us to dynamically set the url 
 import "../App.css"
-
+import { Link, List } from "react-router-dom";
+import LoginForm from "../components/LoginForm/LoginForm";
+import UpdateUserForm from "../components/UpdateUserForm/UpdateUserForm"
+import macbook from "../components/assets/macbook.jpg";
+import ProfileToggle from "../components/ProfileToggle/ProfileToggle"
 
 function UserPage() {
     const [userData, setUserData] = useState ([]); 
@@ -20,25 +23,53 @@ function UserPage() {
     }, []);
 
 
+    const profileMessage = () => {
+        if (usid) {
+            return (
+                <div>
+                    <h2 className="white-header">Profile</h2>
+                    <div className="profile-photo-wrapper">
+                        <div className="profile-header light-pink-bg"></div>
+                        <div className="profile-photo" alt="User Profile Image">
+                            <img src={userData.image}/>
+                        </div>
+                    </div>
+
+                    <ProfileToggle />
+
+
+                    <div className="single-user">
+                        <h2>{userData.first_name} {userData.last_name}</h2>
+                        <h3 className="faded-h3">{userData.username} | {userData.email}</h3>
+                        
+                        <UpdateUserForm />
+
+                        <div className="logout">
+                            <Link to="/logout">Logout</Link>
+                        </div>
+
+                    </div>
+            </div>
+
+            );
+        }
+        return (
+            <div>
+                <h3>Whoops, looks like you're not logged in yet.</h3>
+                <LoginForm />
+            </div>
+
+        )
+    }
+
+    const userMessage = profileMessage()
+
+
 
 
     return (
-        
-       
-        <div className="single-user">
-            <div className="single-user-box">
-                <h2>{userData.username}</h2>
-                <img src={userData.image} alt="Profile"/>
-            </div>
-            
-            <div className="single-user-box">
-                <h3>First name: {userData.first_name}</h3>
-                <h3>Last name: {userData.last_name}</h3>
-                <h3>Email: {userData.email}</h3>
-                <h3>Location: {userData.location}</h3>
-                
-           
-            </div>
+        <div>
+            {userMessage}
         </div>
 
     );

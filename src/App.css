@@ -1,26 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+#root {
+  min-height: 100vh;
+}
+
 * {
   box-sizing: border-box;
 }
 
-html {
+p {
+  line-height: 1.5em;
+}
+h1,
+h2,
+h3,
+h4 {
   font-family: "Montserrat", sans-serif;
 }
 
-p,
-h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+.faded-h3 {
+  color: #cdcdcd;
+  /* font-style: italic; */
 }
 
 .App {
   text-align: center;
-}
-
-#app-wrap {
-  max-width: 1024px;
-  margin: 0 auto;
 }
 
 .App-logo {
@@ -37,6 +51,14 @@ h2 {
 .standard-copy {
   width: 75%;
   margin: 0 auto 2em;
+}
+
+#logout-message {
+  /* display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: stretch; */
+  height: calc(100vh - 10em);
 }
 
 #app-header {
@@ -75,8 +97,11 @@ button {
   font-weight: 600;
   transition-duration: 0.4s;
   border: 2.5px solid #1690b9;
-  margin: 5% auto;
+  margin: 2% auto;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -89,14 +114,51 @@ a {
   text-align: center;
 }
 
-.button-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 50px;
+#delete-button {
+  width: 100%;
+  background-color: #e29ea6;
+  border: #e29ea6;
+  /* margin-right: 5%; */
 }
 
+.fav-product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  row-gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+  width: 98%;
+  margin-bottom: 100px;
+}
+
+.faded-text {
+  color: #cdcdcd;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.grey-link {
+  color: #cdcdcd;
+}
+
+.grey-link:hover {
+  color: #e29ea6;
+  transition-duration: 0.4s;
+}
+
+.pink-header {
+  color: #e29ea6;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  /* text-transform: uppercase; */
+  font-size: 25px;
+  margin-top: 150px;
+}
+.vertical {
+  flex-direction: column;
+}
 #product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -225,19 +287,13 @@ a {
   color: #2f4f4f;
   margin: 10px;
   padding: 10px;
-  /* border-style: solid;
-  border-radius: 5%;
-  border-color: black; */
-  display: flex;
+  /* display: flex; */
 }
 
 .single-user-box {
   color: #2f4f4f;
   margin: 10px;
   padding: 10px;
-  /* border-style: solid;
-  border-radius: 5%;
-  border-color: black; */
   width: 50%;
 }
 
@@ -263,6 +319,7 @@ a {
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 40%;
 }
 
 .about-logo {
@@ -276,13 +333,79 @@ a {
   text-align: center;
 }
 
-.about-us-page {
-  /* margin-top: 45vh; */
+.profile-header {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 45vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.light-pink-bg {
+  background-color: #f6ecf0;
+}
+
+.pink-bg {
+  background-color: #f6ecf0;
+}
+
+.white-header {
+  color: #1690b9;
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.profile-photo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  height: 25vw;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  max-width: 250px;
+  max-height: 250px;
+  background-color: white;
+}
+
+.profile-photo img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
+}
+
+.about-button-wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-button-wrapper button {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 1em;
 }
 
 @media screen and (max-width: 800px) {
   #product-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fav-product-list {
+    grid-template-columns: 1fr;
   }
 
   #app-header {
@@ -292,11 +415,7 @@ a {
   }
 
   #app-header a {
-    padding: 0em 1em;
-  }
-
-  html {
-    padding: 0 25px;
+    padding: 0em 0em;
   }
 
   #about-us-header img {
@@ -311,6 +430,8 @@ a {
 
   .about-logo img {
     width: 50%;
+    max-height: 50vw;
+    height: 50vw;
   }
 }
 
@@ -327,6 +448,22 @@ a {
 
   .about-logo img {
     width: 40%;
+    /* max-height: 100%; */
+    height: 40vh;
+    object-fit: contain;
+    margin-top: 0;
+  }
+
+  .about-button-wrapper {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .profile-photo {
+    width: 50%;
+    height: 50vw;
+    margin-top: 0;
   }
 }
 

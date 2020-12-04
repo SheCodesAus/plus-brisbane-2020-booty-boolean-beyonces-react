@@ -16,7 +16,7 @@ function USPGrid() {
                         <h5>Top-notch Product Recommendations</h5>
                         <p>Our team of tech experts only include products that they would happily spend their 
                             money on. True tech geeks at heart, this causes more (respectful) arguments than 
-                            we’d like to admit.</p>
+                            we’d like to admit. Check out our hand-selected accessories for every Laptop, Phone and Tablet!</p>
                     </div>
                     <div>
                         <img className="tick" src={Tick}/>

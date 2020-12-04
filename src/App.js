@@ -15,8 +15,12 @@ import ProductPage from "./pages/ProductPage";
 import CategoryListPage from "./pages/CategoryListPage";
 import UserPage from "./pages/UserPage";
 import FavPage from "./pages/FavPage";
+import OopsPage from "./pages/OopsPage";
+import Footer from "./components/Footer/Footer";
+
 
 import './App.css';
+import NewUserPage from './pages/NewUserPage';
 
 
 function App() {
@@ -64,22 +68,30 @@ function App() {
             <AboutPage />
           </Route>
 
+          <Route path="/newuser">
+            <NewUserPage />
+          </Route>
+
+
+          <Route path="/oops">
+            <OopsPage />
+          </Route>
+
           <Route path="/:category">
             <CategoryListPage />
           </Route>
 
-        
-          
 
           <Route path="/">
               <HomePage />
           </Route>
 
-
         </Switch>
-
+        
+        <Footer />
 
     </Router>
+    
   );
 }
 
