@@ -7,11 +7,14 @@ import { useHistory } from 'react-router-dom';
 
 function ProductCard(props) {
     const { productData } = props;
+
     const token = window.localStorage.getItem("token")
     const userID = window.localStorage.getItem("userID")
     const history = useHistory();
     // console.log("TEST")
     // console.log(productData.id, productData.is_fav )
+
+
 
 
     // get product info from URL id
