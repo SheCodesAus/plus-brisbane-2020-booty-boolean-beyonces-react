@@ -5,6 +5,7 @@ import OptIn_Logo from "../assets/OptIn_Logo.png";
 import OptIn_OpenCircle from "../assets/OptIn_OpenCircle.png";
 import { useHistory } from 'react-router-dom';
 
+
 function ProductCard(props) {
     const { productData } = props;
     const token = window.localStorage.getItem("token")
@@ -49,7 +50,7 @@ function ProductCard(props) {
             if (token){
                 putData().then((response) => {
                     console.log(response)
-                history.push("/fav");
+                history.push(`/fav`);
                 });
             }
             else{
