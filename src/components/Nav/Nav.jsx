@@ -70,7 +70,6 @@ function Nav() {
     return (
     
         <nav className="nav-bar">
-            <Link to="/about">About Us</Link>
             
             <DropdownMenu /> 
             

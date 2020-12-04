@@ -1,12 +1,23 @@
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
-  flex-basis: 40%;
+  flex-basis: 45%;
   align-items: top;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-size: 16px;
-  align-content: top;
-  margin-top: 2.5em;
+  align-content: center;
+}
+
+#about-button {
+  color: #1690b9;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: auto;
+  padding: 0 0.5em;
+  margin-top: 0;
+  letter-spacing: 2px;
 }
 
 Link {

@@ -32,7 +32,7 @@ function LogoutPage() {
     const Log = userLog()
 
     return (
-      <div>
+      <div id="logout-message">
         <p>See ya later, alligator!</p>
         <h3>{Log}</h3>
       </div>

@@ -57,7 +57,7 @@ function FavProductCard(props) {
                     <p className="price">${productData.price}</p>
                 </div>
 
-                <Link to={`/products/${productData.id}`}><button>See Details </button></Link>
+                <Link to={`/products/${productData.id}`}><button id="btn-full-width">See Details </button></Link>
                 <button id="delete-button" type="submit" onClick={handleSubmit}>Remove from list</button>
     
             </div>

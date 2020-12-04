@@ -74,7 +74,7 @@ function FavPage() {
                         <p className="faded-text"><i>You haven't saved any phones yet. <Link to="/phone" className="grey-link">Browse them all here!</Link></i></p>
                     </div>}
                 <div className="fav-product-list">
-                    {userData.fav.filter(fav => fav.category == "phone").length <= 0  && <h3>Your fav list is empty, time to go browsing!</h3>}
+                    {/* {userData.fav.filter(fav => fav.category == "phone").length <= 0  && <h3>Your fav list is empty, time to go browsing!</h3>} */}
                     {userData.fav.filter(fav => fav.category == "phone").map((filteredFav, key)=> {
                         return <FavProductCard key={key} productData={filteredFav} />;
                     })}

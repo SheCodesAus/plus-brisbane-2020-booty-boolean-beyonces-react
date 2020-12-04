@@ -46,7 +46,8 @@ function NewUserForm () {
         postData().then((response) => {
             console.log(response)
         setUser("user", response.user);
-        history.push("/");
+        window.alert("Congrats! You've successfully created a user profile.");
+        history.push("/profile");
         });
         }
     };

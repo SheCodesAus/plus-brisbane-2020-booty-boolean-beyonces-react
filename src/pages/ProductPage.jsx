@@ -5,6 +5,9 @@ import { useHistory } from 'react-router-dom';
 import "./ProductPage.css"
 import jbhifi from "../components/assets/jbhifi.jpg";
 
+import UseModal from "../components/UseModal/UseModal"
+import Modal from "../components/Modal/Modal"
+
 import "../App.css";
 
 const token = window.localStorage.getItem("token")
@@ -81,7 +84,7 @@ function ProductPage() {
     // function to handle the button clickity-click
     const handleSubmit = (e) => {
    
-        e.preventDefault();
+        // e.preventDefault();
         
         if (token){
             putData().then((response) => {
@@ -95,7 +98,16 @@ function ProductPage() {
         
     };
 
+
+
     const inFavList = () => {
+        const {isShowing, toggle} = UseModal();
+
+        function buttonClick() {
+            toggle();
+            handleSubmit();
+          }
+
         if (productData.is_fav) {
             return (
                 <div>
@@ -105,11 +117,19 @@ function ProductPage() {
             )
         }
         return (
-            <button type="submit" onClick={handleSubmit}>Save To Your Favourites</button>
+            <div>
+            <button type="submit" onClick={buttonClick}>Save To Your Favourites</button>
+            <Modal
+                isShowing={isShowing}
+                hide={toggle}
+            />
+      </div>
         )
     }
 
     const favButton = inFavList()
+
+    
 
 
       

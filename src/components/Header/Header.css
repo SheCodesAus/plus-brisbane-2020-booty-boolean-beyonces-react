@@ -6,7 +6,7 @@
 
 .my-header {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 40%;
   align-items: top;
   flex-wrap: nowrap;
   justify-content: left;

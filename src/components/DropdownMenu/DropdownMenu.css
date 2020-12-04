@@ -4,6 +4,15 @@
   position: relative;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
+  width: 100%;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menu-container div {
+  margin-top: 1.5em;
 }
 
 .menu {
@@ -32,13 +41,17 @@
   font-size: 16px;
 }
 
+#no-padding {
+  padding: 0 0;
+}
+
 .menu li a {
   text-decoration: none;
   color: #333333;
-  padding: 8px 16px;
   display: block;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
+  padding: 0 0;
 }
 
 .menu-trigger {
@@ -59,12 +72,26 @@
   width: auto;
   padding: 0 0.5em;
   margin-top: 0;
-  letter-spacing: 2px;;
+  letter-spacing: 2px;
 }
 
 @media screen and (max-width: 800px) {
   .menu-trigger {
     margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu-container {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu-container div {
+    margin-top: 0em;
+    padding: 0.5em 0;
   }
 }
 

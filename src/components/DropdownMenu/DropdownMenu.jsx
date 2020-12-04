@@ -55,26 +55,38 @@ const DropdownMenu = () => {
 
     return (
         <div className="menu-container">
+            
             {usid ?
-            <div>
-                <button onClick={onClick} className="menu-trigger" id="nav-button">Hi, {name}</button>
-                <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
+            <div className="menu-container">
+                <div>
+                    <Link to="/about"><button id="nav-button">About Us</button></Link>
+                </div>
+                <div>
+                    <button onClick={onClick} className="menu-trigger" id="nav-button">Hi, {name}</button>
+                    <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul>
                     <li><a href="/profile">My Profile</a></li>
                     <li><a href="/fav">Favourites</a></li>
                 </ul>
                 </nav>
+                </div>
             </div> 
             :
-            <div>
-                <button onClick={onClick} className="menu-trigger" id="nav-button">Login</button>
-                <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
+            <div className="menu-container">
+                <div>
+                    <Link to="/about"><button id="nav-button">About Us</button></Link>
+                </div>
+                <div>
+                    <button onClick={onClick} className="menu-trigger" id="nav-button">Login</button>
+                    <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/login" id="no-padding">Login</a></li>
                     <li><a href="/newuser">New User</a></li>
                 </ul>
                 </nav>
+                </div>
             </div>      
+
         }
 
         </div>
