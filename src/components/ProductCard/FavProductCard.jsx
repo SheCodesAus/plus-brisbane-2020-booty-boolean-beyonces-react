@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
+
 // AA 29.11:  this is a copy of product card jsx.
 // The only difference is the delete button so the user can delete the item from their
 // fav list
@@ -58,8 +59,9 @@ function FavProductCard(props) {
 
                 <Link to={`/products/${productData.id}`}><button>See Details </button></Link>
                 <button id="delete-button" type="submit" onClick={handleSubmit}>Remove from list</button>
-
+    
             </div>
+
 
         
         </div>
