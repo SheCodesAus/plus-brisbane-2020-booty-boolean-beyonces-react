@@ -5,6 +5,7 @@ Link {
 .category-section {
   background-color: #f6ecf0;
   padding: 2em;
+  padding-bottom: 5em;
   width: 100%;
 }
 
@@ -39,6 +40,7 @@ Link {
 .grid-wrapper-2x2 > div > h5 {
   font-family: Montserrat, Arial, sans-serif;
   font-size: 25px;
+  padding-top: 20px;
   margin: 0.5em 0;
 }
 

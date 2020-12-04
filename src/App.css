@@ -80,12 +80,14 @@ button {
   color: white;
   text-decoration: none;
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 600;
   transition-duration: 0.4s;
   border: 2.5px solid #1690b9;
   margin: 5% auto;
   font-size: 14px;
   text-transform: uppercase;
+  min-width: 284px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
 }
 
 button:hover {
