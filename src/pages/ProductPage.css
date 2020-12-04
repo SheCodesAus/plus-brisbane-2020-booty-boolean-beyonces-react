@@ -89,6 +89,20 @@ Link {
   width: 100%;
 }
 
+.prod-img {
+  background-color: white;
+  padding: 1.5em;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.prod-img img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
 /* desktop/laptop */
 @media (max-width: 800px) {
   .grid-wrapper-2x2 {

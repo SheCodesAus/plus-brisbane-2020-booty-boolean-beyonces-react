@@ -101,28 +101,24 @@ function ProductPage() {
 
 
     const inFavList = () => {
-        const {isShowing, toggle} = UseModal();
+        // const {isShowing, toggle} = UseModal();
 
-        function buttonClick() {
-            toggle();
-            handleSubmit();
-          }
+        // function buttonClick() {
+        //     toggle();
+        //     handleSubmit();
+        //   }
 
         if (productData.is_fav) {
             return (
                 <div>
                     <p>This product is already on your favourites list!</p>
-                    <Link to="/Fav"><button>Go to List</button></Link>
+                    <Link to="/Fav"><button className="btn-full-width">Go to List</button></Link>
                 </div>
             )
         }
         return (
             <div>
-            <button type="submit" onClick={buttonClick}>Save To Your Favourites</button>
-            <Modal
-                isShowing={isShowing}
-                hide={toggle}
-            />
+            <button type="submit" onClick={handleSubmit}>Save To Your Favourites</button>
       </div>
         )
     }
@@ -140,9 +136,9 @@ function ProductPage() {
           <div className="product-wrapper">      
           <h3>{productData.model_tech}</h3>
           <p>{productData.overview}</p>
-              <div className="grid-wrapper-2x2"> 
+              <div className="product-page"> 
                   <div>
-                  <div className="img-white-bg">
+                  <div className="prod-img">
                         <img src={productData.image} />
                     </div>
                   </div>
