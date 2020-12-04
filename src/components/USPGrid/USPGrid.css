@@ -47,9 +47,9 @@
 @media (max-width: 1025px) {
   .grid-wrapper-4x1 {
     width: 100%;
-    padding: 30px;
-    row-gap: 20px;
-    column-gap: 20px;
+    padding: 32px;
+    row-gap: 30px;
+    column-gap: 30px;
   }
 }
 
@@ -58,8 +58,8 @@
   .grid-wrapper-4x1 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: 30px;
+    column-gap: 30px;
   }
 }
 
