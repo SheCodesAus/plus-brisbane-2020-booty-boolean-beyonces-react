@@ -16,6 +16,8 @@ import CategoryListPage from "./pages/CategoryListPage";
 import UserPage from "./pages/UserPage";
 import FavPage from "./pages/FavPage";
 import OopsPage from "./pages/OopsPage";
+import Footer from "./components/Footer/Footer";
+
 
 import './App.css';
 import NewUserPage from './pages/NewUserPage';
@@ -85,7 +87,7 @@ function App() {
           </Route>
 
         </Switch>
-
+        <Footer />
 
     </Router>
   );
