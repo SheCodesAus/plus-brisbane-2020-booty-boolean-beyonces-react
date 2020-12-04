@@ -69,7 +69,7 @@ function CategoryTile() {
                         </div>
                     </Link>
                     <h5 > Accessories </h5>
-                    <p > Bling up your life with all the fun things! Accessories make you feel good and look like a proper professional on a mission to live your best life.
+                    <p > Bling up your life with all the fun things! Accessories make you feel good and look like a proper professional on a mission to live your best life. We've selected the perfect accessories for you!
                     </p>
 
                 
