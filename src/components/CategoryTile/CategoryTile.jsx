@@ -17,7 +17,7 @@ function CategoryTile() {
         <div>
 
         <div className="category-section">
-            <h3>Let's Go Shopping!</h3>
+            <h2>Let's Go Shopping!</h2>
             <div className="grid-wrapper-2x2">
                 <div>
                     <Link to="/laptop"> 

@@ -39,6 +39,7 @@
   display: block;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
+  
 }
 
 .menu-trigger {
@@ -55,10 +56,11 @@
   background-color: transparent;
   border: none;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: bold;
   width: auto;
   padding: 0 0.5em;
   margin-top: 0;
+  letter-spacing: 2px;
 }
 
 @media screen and (max-width: 800px) {

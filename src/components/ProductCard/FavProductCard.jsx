@@ -44,7 +44,6 @@ function FavProductCard(props) {
 
     return (
         <div className="product-card" id="fav-card">
-        <button id="delete-button" type="submit" onClick={handleSubmit}>X</button>
             <Link to={`/products/${productData.id}`}>
                 <img src={productData.image}/>
             </Link>
@@ -58,6 +57,8 @@ function FavProductCard(props) {
                 </div>
 
                 <Link to={`/products/${productData.id}`}><button>See Details </button></Link>
+                <button id="delete-button" type="submit" onClick={handleSubmit}>Remove from list</button>
+
             </div>
 
         
