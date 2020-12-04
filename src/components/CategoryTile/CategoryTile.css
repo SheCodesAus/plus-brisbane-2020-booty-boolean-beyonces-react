@@ -5,7 +5,6 @@ Link {
 .category-section {
   background-color: #f6ecf0;
   padding: 2em;
-  padding-bottom: 5em;
   width: 100%;
 }
 
@@ -16,6 +15,7 @@ Link {
   padding-bottom: 2em;
   font-size: 25px;
 }
+
 
 .grid-wrapper-2x2 {
   position: relative;
