@@ -164,9 +164,9 @@ function ProductPage() {
               </div>
                 <div className="supplier">
                     <p>The {productData.model_tech} is available at:</p>
-                    <Link to={`/products/${productData.supplier1}`}>
+                    <a href={productData.supplier1} target="_blank" >
                         <img src="https://theme.zdassets.com/theme_assets/9481415/ca04e11084c5c97a4022fa6831761b32566428d5.png" className="supplier-logo"/>
-                    </Link>
+                    </a>
                 </div>
           </div>
 

@@ -99,6 +99,7 @@ function NewUserForm () {
         <input
             type="text"
             id="profile_picture"
+            placeholder="enter image url"
             onChange={handleChange}
         />
         </div>
